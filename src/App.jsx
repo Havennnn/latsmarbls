@@ -37,7 +37,7 @@ const App = () => {
             <Skills />
             <SkillsBox />
           </div>
-          <div id="about">
+          <div id="contact">
             <About />
           </div>
           <div id="projects">
