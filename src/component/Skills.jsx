@@ -56,7 +56,7 @@ const Skills = () => {
               }`}
               disabled={currentPage === 1}
             >
-              <img src={assets.leftIcon} className="w-3 h-3" />
+              <img src="/leftIcon.svg" className="w-3 h-3" />
             </button>
 
             <button
@@ -66,7 +66,7 @@ const Skills = () => {
               }`}
               disabled={currentPage === 2}
             >
-              <img src={assets.rightIcon} className="w-3 h-3" />
+              <img src="/rightIcon.svg" className="w-3 h-3" />
             </button>
           </div>
         </div>
