@@ -45,7 +45,7 @@ const WelcomeScreen = () => {
           transition={{ duration: 1, ease: "easeInOut" }}
           className="text-dgray font-bold flex justify-center items-center gap-2"
         >
-          <img src={logoFilled} className="w-6 h-6 md:h-8 md:w-8"></img>
+          <img src="/LogoFilled.svg" className="w-6 h-6 md:h-8 md:w-8"/>
           <p className="text-xl md:text-3xl">
             Lats<span className="text-2xl md:text-4xl text-gray">Marbls</span>
           </p>
