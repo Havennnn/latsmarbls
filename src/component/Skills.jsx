@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
-import { assets } from "../assets/asset.js";
 
 const Skills = () => {
   const [currentPage, setCurrentPage] = useState(1);

@@ -1,5 +1,4 @@
 import React from "react";
-import mernAuth from "../assets/mernAuth.jpg";
 
 const Project = () => {
   return (
