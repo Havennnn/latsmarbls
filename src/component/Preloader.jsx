@@ -26,7 +26,7 @@ const Preloader = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0, scale: 0.9 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
       />
     </div>
   );
@@ -40,7 +40,7 @@ const WelcomeScreen = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           className="text-dgray font-bold flex justify-center items-center gap-2"
         >
           <img src="/LogoFilled.svg" className="w-6 h-6 md:h-8 md:w-8"/>

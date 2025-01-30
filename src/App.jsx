@@ -17,11 +17,11 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000); // Adjust as needed for loading duration
+    }, 3000);
   }, []);
 
   return (
-    <HashRouter> {/* Use HashRouter instead of BrowserRouter */}
+    <HashRouter>
       {loading ? (
         <Preloader />
       ) : (
