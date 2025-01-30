@@ -21,17 +21,17 @@ const Project = () => {
                 className="w-full rounded-[1.5rem] shadow-sm"
               />
               <div className="flex justify-between items-baseline mt-2">
-                <h3 className="text-xl font-semibold text-dgray">Login Auth</h3>
+                <h3 className="text-md md:text-xl font-semibold text-dgray">Login Auth</h3>
                 <div className="flex items-center gap-2 text-lg">
                   <a
                     href="https://github.com/Havennnn/mern-auth"
                     className="text-dgray flex items-center justify-center rounded-full"
                   >
-                    <i className="fa-brands fa-github text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                    <i className="fa-brands fa-github text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
                   </a>
                 </div>
               </div>
-              <p className="text-gray-500 text-sm mt-2">
+              <p className="text-gray-500 text-sm mt-2 tracking-tight">
                 A fully functional authentication system built using the MERN
                 stack with secure features such as email verification and
                 password reset via a 6-digit OTP. react, node, express,tailwind
@@ -74,7 +74,7 @@ const Project = () => {
                 className="w-full rounded-[1.5rem] shadow-sm"
               />
               <div className="flex justify-between items-baseline mt-2">
-                <h3 className="text-xl font-semibold text-dgray">
+                <h3 className="text-md md:text-xl font-semibold text-dgray">
                   Story Weaver
                 </h3>
                 <div className="flex items-center gap-2 text-lg">
@@ -82,11 +82,17 @@ const Project = () => {
                     href="https://github.com/Havennnn/StoryWeaver"
                     className="text-dgray flex items-center justify-center rounded-full"
                   >
-                    <i className="fa-brands fa-github text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                    <i className="fa-brands fa-github text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                  </a>
+                  <a
+                    href="https://story-weaver-two.vercel.app"
+                    className="flex items-center justify-center"
+                  >
+                    <i className="fa-solid fa-globe text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
                   </a>
                 </div>
               </div>
-              <p className="text-gray-500 text-sm mt-2">
+              <p className="text-gray-500 text-sm mt-2 tracking-tight">
                 A modern and dynamic storytelling platform built using React,
                 Tailwind CSS, and React Router. Story Weaver combines
                 cutting-edge technology with creativity, integrating the Google
@@ -125,17 +131,17 @@ const Project = () => {
                 className="w-full rounded-[1.5rem] shadow-sm"
               />
               <div className="flex justify-between items-baseline mt-2">
-                <h3 className="text-xl font-semibold text-dgray">CuratorArt</h3>
+                <h3 className="text-md md:text-xl font-semibold text-dgray">CuratorArt</h3>
                 <div className="flex items-center gap-2 text-lg">
                   <a
                     href="https://github.com/Havennnn/curatorArt"
                     className="text-dgray flex items-center justify-center rounded-full"
                   >
-                    <i className="fa-brands fa-github text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                    <i className="fa-brands fa-github text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
                   </a>
                 </div>
               </div>
-              <p className="text-gray-500 text-sm mt-2">
+              <p className="text-gray-500 text-sm mt-2 tracking-tight">
                 A sleek and responsive art curation platform designed using
                 React, Node.js, and Tailwind CSS. This website allows users to
                 explore through a clean and modern interface.
@@ -165,7 +171,7 @@ const Project = () => {
                 className="w-full rounded-[1.5rem] shadow-sm"
               />
               <div className="flex justify-between items-baseline mt-2">
-                <h3 className="text-xl font-semibold text-dgray">
+                <h3 className="text-md md:text-xl font-semibold text-dgray">
                   Saas Landing Page
                 </h3>
                 <div className="flex items-center gap-2 text-lg text-dgray">
@@ -173,17 +179,17 @@ const Project = () => {
                     href="https://github.com/Havennnn/lightsaas-landingpage"
                     className="flex items-center justify-center"
                   >
-                    <i className="fa-brands fa-github text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                    <i className="fa-brands fa-github text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
                   </a>
                   <a
                     href="https://lightsaas-landingpage-tau.vercel.app"
                     className="flex items-center justify-center"
                   >
-                    <i className="fa-solid fa-globe text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                    <i className="fa-solid fa-globe text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
                   </a>
                 </div>
               </div>
-              <p className="text-gray-500 text-sm mt-2">
+              <p className="text-gray-500 text-sm mt-2 tracking-tight">
                 A modern landing page designed using React, Framer, and Tailwind
                 CSS. This website allows users to explore through a clean and
                 modern interface.
