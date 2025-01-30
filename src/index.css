@@ -1,0 +1,268 @@
+@import url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply font-sans;
+  }
+}
+
+@layer utilities {
+  @keyframes draw {
+    0% {
+      stroke-dashoffset: 4500;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .animate-draw {
+    animation: draw 8s ease;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.element::before {
+  content: "";
+  background-color: transparent;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  top: 0;
+  margin-left: -52px;
+  border-radius: 0 1.5rem 0 0;
+  box-shadow: 10px -10px 0 0 #1e1e1e;
+}
+
+.element2::before {
+  content: "";
+  background-color: transparent;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  top: 67.5px;
+  right: 0;
+  border-radius: 0 1.5rem 0 0;
+  box-shadow: 10px -10px 0 0 #1e1e1e;
+}
+
+.element3::before {
+  content: "";
+  background-color: white;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: -40px;
+  border-radius: 0 0 0 1.5rem;
+  box-shadow: -10px 10px 0 0 #1e1e1e;
+}
+
+.element4::before {
+  content: "";
+  background-color: white;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -40px;
+  border-radius: 0 0 0 1.5rem;
+  box-shadow: -10px 10px 0 0 #1e1e1e;
+}
+
+.element5::before {
+  content: "";
+  background-color: white;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  top: 0;
+  margin-left: -104px;
+  border-radius: 0 1.5rem 0 0;
+  box-shadow: 12px -12px 0 0 #1e1e1e;
+}
+
+.element6::before {
+  content: "";
+  background-color: white;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  top: 62px;
+  right: 0;
+  z-index: -10;
+  border-radius: 0 1.5rem 0 0;
+  box-shadow: 12px -12px 0 0 #1e1e1e;
+}
+
+.element7::before {
+  content: "";
+  background-color: white;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  top: 0;
+  margin-left: -52px;
+  border-radius: 0 1.5rem 0 0;
+  box-shadow: 10px -10px 0 0 #1e1e1e;
+}
+
+.element8::before {
+  content: "";
+  background-color: transparent;
+  height: 2.5rem;
+  width: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -38px;
+  right: 0;
+  border-radius: 0 1rem 0 0;
+  box-shadow: 10px -10px 0 0 #1e1e1e;
+}
+
+.element9::before {
+  content: "";
+  background-color: transparent;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -12px;
+  margin-left: -52px;
+  border-radius: 0 1.5rem 0 0;
+  box-shadow: 10px -10px 0 0 #1e1e1e;
+}
+
+.element10::before {
+  content: "";
+  background-color: white;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  top: 64px;
+  right: 0;
+  border-radius: 0 1.5rem 0 0;
+  box-shadow: 10px -10px 0 0 #1e1e1e;
+}
+
+.element11::before {
+  content: "";
+  background-color: transparent;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -40px;
+  border-radius: 0 1.5rem 0 0;
+  box-shadow: 10px -10px 0 0 #1e1e1e;
+}
+
+.element12::before {
+  content: "";
+  background-color: white;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: -40px;
+  border-radius: 1.5rem 0 0 0;
+  box-shadow: -10px -10px 0 0 #1e1e1e;
+}
+
+.element13::before {
+  content: "";
+  background-color: white;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  border-radius: 1.5rem 0 0 0;
+  box-shadow: -10px -10px 0 0 #1e1e1e;
+}
+
+.element14::before {
+  content: "";
+  background-color: white;
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -16px;
+  border-radius: 0 0 10px 0;
+  box-shadow: 5px 5px 0 0 #1e1e1e;
+}
+
+.element15::before {
+  content: "";
+  background-color: white;
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: -16px;
+  border-radius: 0 10px 0 0;
+  box-shadow: 5px -5px 0 0 #1e1e1e;
+}
+
+.element16::before {
+  content: "";
+  background-color: white;
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: -31.5px;
+  border-radius: 1.5rem 0 0 0;
+  box-shadow: -8px -8px 0 0 #1e1e1e;
+}
+
+.element17::before {
+  content: "";
+  background-color: white;
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -31.5px;
+  border-radius: 0 1.5rem 0 0;
+  box-shadow: 8px -8px 0 0 #1e1e1e;
+}
+
+.menu {
+  box-shadow: 8px -8px 0 0 #1e1e1e;
+}
