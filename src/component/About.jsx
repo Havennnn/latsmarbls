@@ -98,7 +98,7 @@ const About = () => {
           </p>
           <li
             onClick={openModal}
-            className="flex items-center justify-center w-1/2 sm:w-42 h-12 gap-2 px-6 text-white bg-dgray rounded-xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out animate-fadeIn"
+            className="flex items-center justify-center w-1/2 sm:w-42 h-12 gap-2 px-6 text-white bg-dgray rounded-xl hover:cursor-pointer hover:transform hover:scale-105 hover:bg-highlight transition duration-300 ease-in-out animate-fadeIn"
           >
             <i className="fas fa-envelope text-xl"></i>
             <p className="text-xl font-semibold text-white">Contact</p>
@@ -144,7 +144,7 @@ const About = () => {
                 ></textarea>
                 <button
                   type="submit"
-                  className="w-full p-2 bg-dgray text-white rounded-xl hover:transform hover:scale-110 transition duration-300 ease-in-out"
+                  className="w-full p-2 bg-dgray text-white rounded-xl hover:transform hover:scale-105 transition duration-300 ease-in-out"
                 >
                   Submit Form
                 </button>
@@ -169,7 +169,7 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-brands fa-square-github text-4xl sm:text-5xl text-white hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                <i className="fa-brands fa-square-github text-4xl sm:text-5xl text-white hover:transform hover:scale-105 hover:text-[#d6d6d6] transition duration-300 ease-in-out"></i>
               </a>
             </li>
             <li className="flex animate-fadeIn">
@@ -178,7 +178,7 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-brands fa-linkedin text-4xl sm:text-5xl text-white hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                <i className="fa-brands fa-linkedin text-4xl sm:text-5xl text-white hover:transform hover:scale-105 hover:text-[#d6d6d6] transition duration-300 ease-in-out"></i>
               </a>
             </li>
             <li className="flex animate-fadeIn">
@@ -187,7 +187,7 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-brands fa-square-facebook text-4xl sm:text-5xl text-white hover:transform hover:scale-110 transition duration-300 ease-in-outs"></i>
+                <i className="fa-brands fa-square-facebook text-4xl sm:text-5xl text-white hover:transform hover:scale-105 hover:text-[#d6d6d6] transition duration-300 ease-in-outs"></i>
               </a>
             </li>
             <li className="flex animate-fadeIn">
@@ -196,7 +196,7 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-brands fa-square-instagram text-4xl sm:text-5xl text-white hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                <i className="fa-brands fa-square-instagram text-4xl sm:text-5xl text-white hover:transform hover:scale-105 hover:text-[#d6d6d6] transition duration-300 ease-in-out"></i>
               </a>
             </li>
           </ul>

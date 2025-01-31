@@ -7,15 +7,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'], // Use "sans" as the default
-        poppins: ['Poppins', 'sans-serif'], // Add a specific name if desired
+        sans: ['Poppins', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       colors: {
         'gray': '#6F6F6F', 
-        'dgray': '#1E1E1E', 
+        'dgray': '#1E1E1E',
+        'highlight': '#3B3B3B',
       },
       keyframes: {
-        // Define custom keyframes
         wiggle: {
           "0%, 100%": { transform: "rotate(-3deg)" },
           "50%": { transform: "rotate(3deg)" },
@@ -26,7 +26,6 @@ export default {
         },
       },
       animation: {
-        // Link keyframes to animation utilities
         wiggle: "wiggle 1s ease-in-out infinite",
         fadeIn: "fadeIn 0.5s ease-in-out",
       },

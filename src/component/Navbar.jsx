@@ -61,9 +61,9 @@ const Navbar = () => {
         <div className="flex justify-center items-center p-3 w-16 rounded-bl-[1.5rem] bg-dgray element5 menu">
           <button onClick={toggleMenu} className="text-white2 element6">
             {isMenuOpen ? (
-              <i className="fa-solid fa-close text-white text-4xl hover:transform hover:scale-110 transition ease-in-out animate-fadeIn duration-500"></i>
+              <i className="fa-solid fa-close text-white text-4xl hover:transform hover:scale-105 transition ease-in-out animate-fadeIn duration-500"></i>
             ) : (
-              <i className="fa-solid fa-bars text-white text-4xl [40px] hover:transform hover:scale-110 transition ease-in-out animate-fadeIn duration-500"></i>
+              <i className="fa-solid fa-bars text-white text-4xl [40px] hover:transform hover:scale-105 transition ease-in-out animate-fadeIn duration-500"></i>
             )}
           </button>
         </div>
@@ -77,25 +77,25 @@ const Navbar = () => {
       >
         <ul className="flex flex-col pt-2 pb-5 gap-5">
           <li
-            className="flex text-white justify-around items-center hover:transform hover:scale-110 transition ease-in-out duration-300"
+            className="flex text-white justify-around items-center hover:transform hover:scale-105 transition ease-in-out duration-300"
             onClick={() => scrollToSection("home")}
           >
             <i className="fa-solid fa-house text-xl text-white"></i>
           </li>
           <li
-            className="flex text-white justify-around items-center hover:transform hover:scale-110 transition ease-in-out duration-300"
+            className="flex text-white justify-around items-center hover:transform hover:scale-105 transition ease-in-out duration-300"
             onClick={() => scrollToSection("skills")}
           >
             <i className="fa-solid fa-code text-xl text-white"></i>
           </li>
           <li
-            className="flex gap-2 text-white justify-around items-center hover:transform hover:scale-110 hover:cursor-pointer transition ease-in-out duration-300"
+            className="flex gap-2 text-white justify-around items-center hover:transform hover:scale-105 hover:cursor-pointer transition ease-in-out duration-300"
             onClick={() => scrollToSection("contact")}
           >
             <i className="fa-solid fa-phone text-xl text-white"></i>
           </li>
           <li
-            className="flex gap-2 text-white justify-around items-center hover:transform hover:scale-110 transition ease-in-out duration-300"
+            className="flex gap-2 text-white justify-around items-center hover:transform hover:scale-105 transition ease-in-out duration-300"
             onClick={() => scrollToSection("projects")}
           >
             <i className="fa-solid fa-folder text-xl text-white"></i>
@@ -127,21 +127,21 @@ const Navbar = () => {
                 <p className="font-semibold text-dgray cursor-default">Home</p>
               </li>
               <li
-                className="flex border-2 text-white border-white hover:cursor-pointer py-1 px-6 rounded-xl justify-center items-center gap-2 hover:transform hover:scale-110 hover:bg-white transition ease-in-out duration-500 group"
+                className="flex border-2 text-white border-white hover:cursor-pointer py-1 px-6 rounded-xl justify-center items-center gap-2 hover:transform hover:scale-105 hover:bg-white transition ease-in-out duration-500 group"
                 onClick={() => scrollToSection("skills")}
               >
                 <i className="fa-solid fa-code text-sm group-hover:text-dgray"></i>
                 <p className="font-semibold group-hover:text-dgray">Skills</p>
               </li>
               <li
-                className="flex border-2 text-white border-white hover:cursor-pointer py-1 px-6 rounded-xl justify-center items-center gap-2 hover:transform hover:scale-110 hover:bg-white transition ease-in-out duration-500 group"
+                className="flex border-2 text-white border-white hover:cursor-pointer py-1 px-6 rounded-xl justify-center items-center gap-2 hover:transform hover:scale-105 hover:bg-white transition ease-in-out duration-500 group"
                 onClick={() => scrollToSection("contact")}
               >
                 <i className="fa-solid fa-id-badge text-sm group-hover:text-dgray"></i>
                 <p className="font-semibold group-hover:text-dgray">Contact</p>
               </li>
               <li
-                className="flex border-2 text-white border-white hover:cursor-pointer py-1 px-6 rounded-xl justify-center items-center gap-2 hover:transform hover:scale-110 hover:bg-white transition ease-in-out duration-500 group"
+                className="flex border-2 text-white border-white hover:cursor-pointer py-1 px-6 rounded-xl justify-center items-center gap-2 hover:transform hover:scale-105 hover:bg-white transition ease-in-out duration-500 group"
                 onClick={() => scrollToSection("projects")}
               >
                 <i className="fa-solid fa-folder text-sm group-hover:text-dgray"></i>

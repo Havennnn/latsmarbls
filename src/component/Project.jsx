@@ -14,7 +14,7 @@ const Project = () => {
         <div className="w-full">
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project Card 1 */}
-            <div className="shadow-xl rounded-[1.5rem] p-6 hover:transform hover:scale-105 transition duration-300 ease-in-out">
+            <div className="shadow-xl rounded-[1.5rem] p-6">
               <img
                 src="/mernAuth.jpg"
                 alt="page"
@@ -27,7 +27,7 @@ const Project = () => {
                     href="https://github.com/Havennnn/mern-auth"
                     className="text-dgray flex items-center justify-center rounded-full"
                   >
-                    <i className="fa-brands fa-github text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                    <i className="fa-brands fa-github text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
                   </a>
                 </div>
               </div>
@@ -67,7 +67,7 @@ const Project = () => {
             </div>
 
             {/* Project Card 2 */}
-            <div className="shadow-xl rounded-[1.5rem] p-6 hover:transform hover:scale-105 transition duration-300 ease-in-out">
+            <div className="shadow-xl rounded-[1.5rem] p-6">
               <img
                 src="/storyWeaver.jpg"
                 alt="page"
@@ -82,13 +82,13 @@ const Project = () => {
                     href="https://github.com/Havennnn/StoryWeaver"
                     className="text-dgray flex items-center justify-center rounded-full"
                   >
-                    <i className="fa-brands fa-github text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                    <i className="fa-brands fa-github text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
                   </a>
                   <a
                     href="https://story-weaver-two.vercel.app"
                     className="flex items-center justify-center"
                   >
-                    <i className="fa-solid fa-globe text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                    <i className="fa-solid fa-globe text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
                   </a>
                 </div>
               </div>
@@ -124,7 +124,7 @@ const Project = () => {
             </div>
 
             {/* Project Card 3 */}
-            <div className="shadow-xl rounded-[1.5rem] p-6 hover:transform hover:scale-105 transition duration-300 ease-in-out">
+            <div className="shadow-xl rounded-[1.5rem] p-6 hover:transform">
               <img
                 src="/curatorArt.jpg"
                 alt="page"
@@ -137,7 +137,7 @@ const Project = () => {
                     href="https://github.com/Havennnn/curatorArt"
                     className="text-dgray flex items-center justify-center rounded-full"
                   >
-                    <i className="fa-brands fa-github text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                    <i className="fa-brands fa-github text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
                   </a>
                 </div>
               </div>
@@ -164,7 +164,7 @@ const Project = () => {
             </div>
 
             {/* Project Card 4 */}
-            <div className="shadow-xl rounded-[1.5rem] p-6 hover:transform hover:scale-105 transition duration-300 ease-in-out">
+            <div className="shadow-xl rounded-[1.5rem] p-6">
               <img
                 src="/saasLandingPage.jpg"
                 alt="page"
@@ -179,13 +179,13 @@ const Project = () => {
                     href="https://github.com/Havennnn/lightsaas-landingpage"
                     className="flex items-center justify-center"
                   >
-                    <i className="fa-brands fa-github text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                    <i className="fa-brands fa-github text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
                   </a>
                   <a
                     href="https://lightsaas-landingpage-tau.vercel.app"
                     className="flex items-center justify-center"
                   >
-                    <i className="fa-solid fa-globe text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                    <i className="fa-solid fa-globe text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
                   </a>
                 </div>
               </div>

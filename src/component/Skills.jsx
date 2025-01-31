@@ -24,26 +24,26 @@ const Skills = () => {
               </h1>
               <Skill name="HTML" level="87%" />
               <Skill name="CSS" level="80%" />
-              <Skill name="Tailwind CSS" level="72%" />
+              <Skill name="Tailwind CSS" level="75%" />
               <Skill name="JavaScript" level="80%" />
               <h1 className="text-white font-medium text-xl pt-6">
                 Frontend Frameworks
               </h1>
-              <Skill name="React.js" level="65%"/>
+              <Skill name="React.js" level="70%"/>
             </div>
           )}
 
           {currentPage === 2 && (
             <div className="flex flex-col h-[280px] lg:h-full animate-fadeIn">
-              <Skill name="Next.js" level="50%" />
+              <Skill name="Next.js" level="60%" />
               <h1 className="text-white font-medium text-xl pt-3">
                 Backend Framework
               </h1>
               <Skill name="Node.js" level="65%" />
               <Skill name="Express.js" level="65%" />
               <h1 className="text-white font-medium text-xl pt-3">Database</h1>
-              <Skill name="MongoDB" level="60%" />
-              <Skill name="PostgreSQL" level="50%" />
+              <Skill name="MongoDB" level="70%" />
+              <Skill name="PostgreSQL" level="60%" />
             </div>
           )}
 
@@ -51,7 +51,7 @@ const Skills = () => {
             <button
               onClick={handlePrevious}
               className={`flex items-center justify-center p-3 bg-[#d9d9d9] text-white rounded-full shadow transition-all duration-500 ease-in-out ${
-                currentPage === 1 ? "opacity-20" : "hover:scale-110"
+                currentPage === 1 ? "opacity-20" : "hover:scale-105 hover:bg-[#acacac]"
               }`}
               disabled={currentPage === 1}
             >
@@ -61,7 +61,7 @@ const Skills = () => {
             <button
               onClick={handleNext}
               className={`flex items-center justify-center p-3 bg-[#d9d9d9] text-white rounded-full shadow transition-all duration-500 ease-in-out ${
-                currentPage === 2 ? "opacity-20" : "hover:scale-110"
+                currentPage === 2 ? "opacity-20" : "hover:scale-105 hover:bg-[#acacac]"
               }`}
               disabled={currentPage === 2}
             >

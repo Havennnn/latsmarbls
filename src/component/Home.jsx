@@ -108,14 +108,14 @@ const Home = () => {
 
           <div className="py-4 flex items-center gap-3">
             <button
-              className="flex items-center justify-center w-32 gap-2 p-2 text-white bg-dgray rounded-xl shadow-xl hover:transform hover:scale-110 transition duration-300 ease-in-out"
+              className="flex items-center justify-center w-32 gap-2 p-2 text-white bg-dgray rounded-xl shadow-xl hover:transform hover:scale-105 hover:bg-highlight transition duration-300 ease-in-out"
               onClick={DownloadCV}
             >
               <i className="fa-solid fa-file-arrow-down text-sm text-white"></i>
               Resume
             </button>
             <a
-              className="flex items-center justify-center w-32 gap-2 p-2 text-white bg-dgray rounded-xl shadow-xl hover:transform hover:scale-110 transition duration-300 ease-in-out"
+              className="flex items-center justify-center w-32 gap-2 p-2 text-white bg-dgray rounded-xl shadow-xl hover:transform hover:scale-105 hover:bg-highlight transition duration-300 ease-in-out"
               href="#projects"
             >
               <i className="fa-solid fa-folder text-sm text-white"></i>
@@ -138,7 +138,7 @@ const Home = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fa-brands fa-square-github text-white text-3xl sm:text-5xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                  <i className="fa-brands fa-square-github text-white text-3xl sm:text-5xl hover:cursor-pointer hover:transform hover:scale-105 hover:text-[#d6d6d6] transition duration-300 ease-in-out"></i>
                 </a>
               </li>
               <li className="flex mt-1">
@@ -147,12 +147,12 @@ const Home = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fa-brands fa-linkedin text-white text-3xl sm:text-5xl hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"></i>
+                  <i className="fa-brands fa-linkedin text-white text-3xl sm:text-5xl hover:cursor-pointer hover:transform hover:scale-105 hover:text-[#d6d6d6] transition duration-300 ease-in-out"></i>
                 </a>
               </li>
               <li
                 onClick={openModal}
-                className="border-black flex items-center justify-around h-[27px] sm:h-[43px] sm:mt-1 gap-2 px-3 sm:px-6 text-dgray bg-white rounded hover:cursor-pointer hover:transform hover:scale-110 transition duration-300 ease-in-out"
+                className="border-black flex items-center justify-around h-[27px] sm:h-[43px] sm:mt-1 gap-2 px-3 sm:px-6 text-dgray bg-white rounded hover:cursor-pointer hover:transform hover:scale-105 hover:bg-[#d6d6d6] transition duration-300 ease-in-out"
               >
                 <i className="fas fa-envelope text-xl"></i>
                 <p className="text-xl font-semibold text-dgray">Contact</p>
@@ -170,9 +170,9 @@ const Home = () => {
                 </h2>
                 <button
                   onClick={closeModal}
-                  className="absolute right-0 mt-1 text-gray-600 text-white rounded-full bg-dgray w-7 h-7 flex justify-center items-center"
+                  className="absolute right-0 mt-1 text-white rounded-full bg-dgray w-7 h-7 flex justify-center items-center hover:bg-highlight"
                 >
-                  X
+                  x
                 </button>
               </div>
 
@@ -200,7 +200,7 @@ const Home = () => {
                 ></textarea>
                 <button
                   type="submit"
-                  className="w-full p-2 bg-dgray text-white rounded-xl hover:transform hover:scale-110 transition duration-300 ease-in-out"
+                  className="w-full p-2 bg-dgray text-white rounded-xl hover:bg-highlight transition duration-300 ease-in-out"
                 >
                   Submit Form
                 </button>
