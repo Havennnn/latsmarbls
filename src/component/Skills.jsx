@@ -35,12 +35,12 @@ const Skills = () => {
 
           {currentPage === 2 && (
             <div className="flex flex-col h-[280px] lg:h-full animate-fadeIn">
-              <Skill name="Next.js" level="60%" />
+              <Skill name="Next.js" level="65%" />
               <h1 className="text-white font-medium text-xl pt-3">
                 Backend Framework
               </h1>
-              <Skill name="Node.js" level="65%" />
-              <Skill name="Express.js" level="65%" />
+              <Skill name="Node.js" level="75%" />
+              <Skill name="Express.js" level="75%" />
               <h1 className="text-white font-medium text-xl pt-3">Database</h1>
               <Skill name="MongoDB" level="70%" />
               <Skill name="PostgreSQL" level="60%" />
