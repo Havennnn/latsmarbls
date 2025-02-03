@@ -97,7 +97,7 @@ const Home = () => {
             I'm Latrell
           </h1>
           <p className="font-bold text-2xl text-gray animate-pulse">
-            WEB DEVELOPER
+            WEB AND APP DEVELOPER
           </p>
           <p className="text-dgray">
             I am a passionate and innovative web developer with a knack for
