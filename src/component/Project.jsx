@@ -45,10 +45,6 @@ const Project = () => {
                   <i className="devicon-react-original"></i>
                   React
                 </span>
-                <span className="text-sm flex gap-1 justify-center items-center">
-                  <i className="devicon-vitejs-plain"></i>
-                  Vite
-                </span>
                 <span className="text-sm px-3 flex gap-1 justify-center items-center">
                   <i className="devicon-nodejs-plain"></i>
                   Node.js
@@ -107,10 +103,6 @@ const Project = () => {
                   React
                 </span>
                 <span className="text-sm flex gap-1 justify-center items-center">
-                  <i className="devicon-vitejs-plain"></i>
-                  Vite
-                </span>
-                <span className="text-sm flex gap-1 justify-center items-center">
                   <i className="devicon-tailwindcss-plain"></i>
                   TailwindCSS
                 </span>
@@ -155,10 +147,6 @@ const Project = () => {
                 <span className="text-sm flex gap-1 justify-center items-center">
                   <i className="devicon-react-original"></i>
                   React
-                </span>
-                <span className="text-sm flex gap-1 justify-center items-center">
-                  <i className="devicon-vitejs-plain"></i>
-                  Vite
                 </span>
                 <span className="text-sm flex gap-1 justify-center items-center">
                   <i className="devicon-tailwindcss-plain"></i>
