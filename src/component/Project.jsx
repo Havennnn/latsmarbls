@@ -21,7 +21,9 @@ const Project = () => {
                 className="w-full rounded-[1.5rem] shadow-sm"
               />
               <div className="flex justify-between items-baseline mt-2">
-                <h3 className="text-md md:text-xl font-semibold text-dgray">Login Auth</h3>
+                <h3 className="text-md md:text-xl font-semibold text-dgray">
+                  Login Auth
+                </h3>
                 <div className="flex items-center gap-2 text-lg">
                   <a
                     href="https://github.com/Havennnn/mern-auth"
@@ -131,7 +133,9 @@ const Project = () => {
                 className="w-full rounded-[1.5rem] shadow-sm"
               />
               <div className="flex justify-between items-baseline mt-2">
-                <h3 className="text-md md:text-xl font-semibold text-dgray">CuratorArt</h3>
+                <h3 className="text-md md:text-xl font-semibold text-dgray">
+                  Art Curator
+                </h3>
                 <div className="flex items-center gap-2 text-lg">
                   <a
                     href="https://github.com/Havennnn/curatorArt"
@@ -146,21 +150,21 @@ const Project = () => {
                 React, Node.js, and Tailwind CSS. This website allows users to
                 explore through a clean and modern interface.
               </p>
-                <p className="mt-5 text-sm font-medium">Technology Used:</p>
-                <div className="mt-3 flex justify-center flex-wrap gap-5 hover:cursor-default text-dgray">
-                  <span className="text-sm flex gap-1 justify-center items-center">
-                    <i className="devicon-react-original"></i>
-                    React
-                  </span>
-                  <span className="text-sm flex gap-1 justify-center items-center">
-                    <i className="devicon-vitejs-plain"></i>
-                    Vite
-                  </span>
-                  <span className="text-sm flex gap-1 justify-center items-center">
-                    <i className="devicon-tailwindcss-plain"></i>
-                    TailwindCSS
-                  </span>
-                </div>
+              <p className="mt-5 text-sm font-medium">Technology Used:</p>
+              <div className="mt-3 flex justify-center flex-wrap gap-5 hover:cursor-default text-dgray">
+                <span className="text-sm flex gap-1 justify-center items-center">
+                  <i className="devicon-react-original"></i>
+                  React
+                </span>
+                <span className="text-sm flex gap-1 justify-center items-center">
+                  <i className="devicon-vitejs-plain"></i>
+                  Vite
+                </span>
+                <span className="text-sm flex gap-1 justify-center items-center">
+                  <i className="devicon-tailwindcss-plain"></i>
+                  TailwindCSS
+                </span>
+              </div>
             </div>
 
             {/* Project Card 4 */}
