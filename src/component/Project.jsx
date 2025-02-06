@@ -31,6 +31,12 @@ const Project = () => {
                   >
                     <i className="fa-brands fa-github text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
                   </a>
+                  <a
+                    href="https://login-auth-by4k.vercel.app"
+                    className="flex items-center justify-center"
+                  >
+                    <i className="fa-solid fa-globe text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
+                  </a>
                 </div>
               </div>
               <p className="text-gray-500 text-sm mt-2 tracking-tight">
@@ -134,6 +140,12 @@ const Project = () => {
                     className="text-dgray flex items-center justify-center rounded-full"
                   >
                     <i className="fa-brands fa-github text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
+                  </a>
+                  <a
+                    href="https://curator-art.vercel.app"
+                    className="flex items-center justify-center"
+                  >
+                    <i className="fa-solid fa-globe text-md md:text-2xl hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
                   </a>
                 </div>
               </div>
