@@ -27,7 +27,7 @@ const App = () => {
       ) : (
         <div
           id="home"
-          className="relative px-8 lg:px-12 pt-6 bg-[#1E1E1E] overflow-hidden"
+          className="relative px-8 lg:px-12 pt-6 2xl:px-16 2xl:pt-10 bg-[#1E1E1E] overflow-hidden"
         >
           <Navbar />
           <ScrollIndicator />

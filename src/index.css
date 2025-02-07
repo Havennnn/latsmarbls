@@ -59,6 +59,18 @@ html {
   box-shadow: 10px -10px 0 0 #1e1e1e;
 }
 
+.elementxl::before {
+  content: "";
+  background-color: transparent;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  top: 0;
+  margin-left: -59px;
+  border-radius: 0 2rem 0 0;
+  box-shadow: 10px -10px 0 0 #1e1e1e;
+}
+
 .element2::before {
   content: "";
   background-color: transparent;
@@ -68,6 +80,18 @@ html {
   top: 67.5px;
   right: 0;
   border-radius: 0 1.5rem 0 0;
+  box-shadow: 10px -10px 0 0 #1e1e1e;
+}
+
+.element2xl::before {
+  content: "";
+  background-color: transparent;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  top: 98px;
+  right: 0;
+  border-radius: 0 2rem 0 0;
   box-shadow: 10px -10px 0 0 #1e1e1e;
 }
 

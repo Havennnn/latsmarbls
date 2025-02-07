@@ -74,14 +74,16 @@ const About = () => {
     <section className="flex flex-col md:flex-row pt-10 w-full h-full gap-5">
       <div className="relative flex w-full md:w-3/6 h-full bg-white rounded-bl-[1.5rem] rounded-br-[1.5rem] rounded-tr-[1.5rem] flex-grow">
         <div className="flex element13">
-          <div className="absolute flex pr-3 py-3 gap-2 bg-dgray justify-center items-center rounded-br-[1.5rem] element12">
+          <div className="absolute flex pr-3 py-3 2xl:py-2 gap-2 bg-dgray justify-center items-center rounded-br-[1.5rem] element12">
             <i className="fa-solid fa-id-badge text-3xl text-white"></i>
-            <h1 className="text-4xl text-white font-bold">Contact</h1>
+            <h1 className="text-4xl 2xl:text-5xl text-white font-bold">
+              Contact
+            </h1>
           </div>
         </div>
 
-        <div className="flex flex-col px-6 py-24 sm:px-14 text-dgray">
-          <h1 className="font-bold text-3xl">Lets Connect!</h1>
+        <div className="flex flex-col px-6 2xl:px-24 py-24 2xl:py-32 sm:px-14 text-dgray 2xl:text-2xl">
+          <h1 className="font-bold text-3xl 2xl:text-5xl">Lets Connect!</h1>
           <p className="text-gray font-normal pl-30 w-5/6 pt-5">
             Looking for a web developer? <br />
             I’d love to hear about your project ideas, answer your questions, or
@@ -98,10 +100,10 @@ const About = () => {
           </p>
           <li
             onClick={openModal}
-            className="flex items-center justify-center w-1/2 sm:w-42 h-12 gap-2 px-6 text-white bg-dgray rounded-xl hover:cursor-pointer hover:transform hover:scale-105 hover:bg-highlight transition duration-300 ease-in-out animate-fadeIn"
+            className="flex items-center justify-center w-1/2 sm:w-42 h-12 2xl:h-14 gap-2 px-6 text-white bg-dgray rounded-xl hover:cursor-pointer hover:transform hover:scale-105 hover:bg-highlight transition duration-300 ease-in-out animate-fadeIn"
           >
-            <i className="fas fa-envelope text-xl"></i>
-            <p className="text-xl font-semibold text-white">Contact</p>
+            <i className="fas fa-envelope"></i>
+            <p className="font-semibold text-white">Contact</p>
           </li>
         </div>
 
@@ -169,7 +171,7 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-brands fa-square-github text-4xl sm:text-5xl text-white hover:transform hover:scale-105 hover:text-[#d6d6d6] transition duration-300 ease-in-out"></i>
+                <i className="fa-brands fa-square-github text-4xl sm:text-5xl 2xl:text-7xl text-white hover:transform hover:scale-105 hover:text-[#d6d6d6] transition duration-300 ease-in-out"></i>
               </a>
             </li>
             <li className="flex animate-fadeIn">
@@ -178,7 +180,7 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-brands fa-linkedin text-4xl sm:text-5xl text-white hover:transform hover:scale-105 hover:text-[#d6d6d6] transition duration-300 ease-in-out"></i>
+                <i className="fa-brands fa-linkedin text-4xl sm:text-5xl 2xl:text-7xl text-white hover:transform hover:scale-105 hover:text-[#d6d6d6] transition duration-300 ease-in-out"></i>
               </a>
             </li>
             <li className="flex animate-fadeIn">
@@ -187,7 +189,7 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-brands fa-square-facebook text-4xl sm:text-5xl text-white hover:transform hover:scale-105 hover:text-[#d6d6d6] transition duration-300 ease-in-outs"></i>
+                <i className="fa-brands fa-square-facebook text-4xl sm:text-5xl 2xl:text-7xl text-white hover:transform hover:scale-105 hover:text-[#d6d6d6] transition duration-300 ease-in-outs"></i>
               </a>
             </li>
             <li className="flex animate-fadeIn">
@@ -196,14 +198,14 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-brands fa-square-instagram text-4xl sm:text-5xl text-white hover:transform hover:scale-105 hover:text-[#d6d6d6] transition duration-300 ease-in-out"></i>
+                <i className="fa-brands fa-square-instagram text-4xl sm:text-5xl 2xl:text-7xl text-white hover:transform hover:scale-105 hover:text-[#d6d6d6] transition duration-300 ease-in-out"></i>
               </a>
             </li>
           </ul>
         </div>
       </div>
 
-      <div className="relative flex w-full md:w-4/6 2xl:w-[48rem] h-full m-auto justify-center items-center">
+      <div className="relative flex w-full md:w-4/6 xl:w-[52rem] 2xl:w-[74rem] h-full m-auto justify-center items-center">
         <div className="w-5/6 hidden md:block animate-fadeIn">
           <Lottie animationData={heroBg} loop={true} />
         </div>

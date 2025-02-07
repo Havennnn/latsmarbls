@@ -40,7 +40,7 @@ const StickyNavbar = () => {
       <div
         id="sticky-navbar"
         ref={navbarRef}
-        className={`h-8 px-8 bg-white transition-all duration-700 ease-linear rounded-[1.5rem] shadow-lg 
+        className={`h-8 2xl:h-12 px-8 2xl:px-12 bg-white transition-all duration-700 ease-linear rounded-[1.5rem] shadow-lg 
         ${
           isSticky
             ? "fixed flex justify-between items-center top-2 inset-x-0 mx-auto z-10 scale-100 bg-opacity-90 backdrop-blur-sm w-[89.7%] md:w-[93%] shadow-2xl"
@@ -52,42 +52,43 @@ const StickyNavbar = () => {
       >
         {isSticky ? (
           <>
-          <div className="flex gap-1 items-center justify-center">
-            <img
-              src="/LogoFilled.svg"
-              alt="logo"
-              className="w-6 h-6 opacity-100"
-            />
-            <h1 className="font-bold text-dgray hidden md:block">
-              Lats<span className="text-gray text-xl">Marbls</span>
-            </h1>
+            <div className="flex gap-1 items-center justify-center">
+              <img
+                src="/LogoFilled.svg"
+                alt="logo"
+                className="w-6 h-6 2xl:w-9 2xl:h-9"
+              />
+              <h1 className="font-bold 2xl:text-2xl text-dgray hidden md:block">
+                Lats
+                <span className="text-gray text-xl 2xl:text-3xl">Marbls</span>
+              </h1>
             </div>
             <div className="justify-between items-center hidden md:flex">
               <ul className="flex gap-2 text-dgray">
                 <li
                   onClick={() => scrollToSection("home")}
-                  className="border px-3 rounded-[1.5rem] flex gap-1 items-center cursor-pointer hover:transform hover:bg-dgray hover:border-dgray hover:text-white transition ease-in-out duration-300"
+                  className="border px-3 2xl:px-5 2xl:text-2xl rounded-[1.5rem] flex gap-1 items-center cursor-pointer hover:transform hover:bg-dgray hover:border-dgray hover:text-white transition ease-in-out duration-300"
                 >
                   <i className="fa-solid fa-house"></i>
                   <p>Home</p>
                 </li>
                 <li
                   onClick={() => scrollToSection("skills")}
-                  className="border px-3 rounded-[1.5rem] flex gap-1 items-center cursor-pointer hover:transform hover:bg-dgray hover:border-dgray hover:text-white transition ease-in-out duration-300"
+                  className="border px-3 2xl:px-5 2xl:text-2xl rounded-[1.5rem] flex gap-1 items-center cursor-pointer hover:transform hover:bg-dgray hover:border-dgray hover:text-white transition ease-in-out duration-300"
                 >
                   <i className="fa-solid fa-code"></i>
                   <p>Skills</p>
                 </li>
                 <li
                   onClick={() => scrollToSection("contact")}
-                  className="border px-3 rounded-[1.5rem] flex gap-1 items-center cursor-pointer hover:transform hover:bg-dgray hover:border-dgray hover:text-white transition ease-in-out duration-300"
+                  className="border px-3 2xl:px-5 2xl:text-2xl rounded-[1.5rem] flex gap-1 items-center cursor-pointer hover:transform hover:bg-dgray hover:border-dgray hover:text-white transition ease-in-out duration-300"
                 >
                   <i className="fa-solid fa-phone"></i>
                   <p>Contact</p>
                 </li>
                 <li
                   onClick={() => scrollToSection("projects")}
-                  className="border px-3 rounded-[1.5rem] flex gap-1 items-center cursor-pointer hover:transform hover:bg-dgray hover:border-dgray hover:text-white transition ease-in-out duration-300"
+                  className="border px-3 2xl:px-5 2xl:text-2xl rounded-[1.5rem] flex gap-1 items-center cursor-pointer hover:transform hover:bg-dgray hover:border-dgray hover:text-white transition ease-in-out duration-300"
                 >
                   <i className="fa-solid fa-folder"></i>
                   <p>Projects</p>
@@ -140,10 +141,10 @@ const StickyNavbar = () => {
             <img
               src="/LogoFilled.svg"
               alt="logo filled"
-              className="w-6 h-6 opacity-100"
+              className="w-6 h-6 2xl:w-9 2xl:h-9"
             />
-            <h1 className="font-bold text-dgray">
-              Lats<span className="text-gray text-xl">Marbls</span>
+            <h1 className="font-bold text-dgray 2xl:text-2xl">
+              Lats<span className="text-gray text-xl 2xl:text-3xl">Marbls</span>
             </h1>
           </div>
         )}

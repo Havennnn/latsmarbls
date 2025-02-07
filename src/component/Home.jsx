@@ -90,16 +90,18 @@ const Home = () => {
           initial="hidden"
           animate="visible"
           variants={slideIn}
-          className="relative flex w-full flex-col gap-1 px-6 sm:px-14 md:w-[55%] md:py-24 lg:w-[58%] my-auto animate-fadeIn"
+          className="relative flex w-full flex-col gap-1 2xl:gap-2 px-6 sm:px-14 2xl:px-24 md:w-[55%] md:py-24 lg:w-[58%] my-auto animate-fadeIn"
         >
-          <p className="font-bold text-gray animate-pulse">GOOD DAY!</p>
-          <h1 className="font-bold text-5xl text-dgray text-shadow">
+          <p className="font-bold text-gray animate-pulse 2xl:text-2xl">
+            GOOD DAY!
+          </p>
+          <h1 className="font-bold text-5xl 2xl:text-7xl text-dgray text-shadow">
             I'm Latrell
           </h1>
-          <p className="font-bold text-2xl text-gray animate-pulse">
+          <p className="font-bold text-2xl 2xl:text-4xl text-gray animate-pulse">
             WEB AND APP DEVELOPER
           </p>
-          <p className="text-dgray">
+          <p className="text-dgray 2xl:text-2xl tracking-tight">
             I am a passionate and innovative web developer with a knack for
             creating captivating and functional websites. With a blend of
             creativity and technical expertise, I bring digital ideas to life
@@ -108,29 +110,29 @@ const Home = () => {
 
           <div className="py-4 flex items-center gap-3">
             <button
-              className="flex items-center justify-center w-32 gap-2 p-2 text-white bg-dgray rounded-xl shadow-xl hover:transform hover:scale-105 hover:bg-highlight transition duration-300 ease-in-out"
+              className="flex items-center justify-center w-32 2xl:w-40 gap-2 p-2 2xl:p-3 text-white text-sm 2xl:text-xl bg-dgray rounded-xl 2xl:rounded-2xl shadow-xl hover:transform hover:scale-105 2xl:hover:scale-110 hover:shadow-xl hover:bg-highlight transition duration-300 ease-in-out"
               onClick={DownloadCV}
             >
-              <i className="fa-solid fa-file-arrow-down text-sm text-white"></i>
+              <i className="fa-solid fa-file-arrow-down text-white"></i>
               Resume
             </button>
             <a
-              className="flex items-center justify-center w-32 gap-2 p-2 text-white bg-dgray rounded-xl shadow-xl hover:transform hover:scale-105 hover:bg-highlight transition duration-300 ease-in-out"
+              className="flex items-center justify-center w-32 2xl:w-40 gap-2 p-2 2xl:p-3 text-white text-sm 2xl:text-xl bg-dgray rounded-xl  2xl:rounded-2xl shadow-xl hover:transform hover:scale-105 2xl:hover:scale-110 hover:shadow-xl hover:bg-highlight transition duration-300 ease-in-out"
               href="#projects"
             >
-              <i className="fa-solid fa-folder text-sm text-white"></i>
+              <i className="fa-solid fa-folder text-white"></i>
               Projects
             </a>
           </div>
         </motion.div>
 
-        <div className="absolute left-0 bottom-0 flex pr-3 py-3 bg-dgray rounded-tr-xl element3">
+        <div className="absolute left-0 bottom-0 flex pr-3 py-3 2xl:pr-6 2xl:py-5 bg-dgray rounded-tr-[1.5rem] element3">
           <div className="element4">
             <motion.ul
               initial="hidden"
               animate="visible"
               variants={slideIn}
-              className="flex items-center justify-center gap-2 sm:gap-3"
+              className="flex items-center justify-center gap-2 sm:gap-3 2xl:gap-4"
             >
               <li className="flex mt-1">
                 <a
@@ -138,7 +140,7 @@ const Home = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fa-brands fa-square-github text-white text-3xl sm:text-5xl hover:cursor-pointer hover:transform hover:scale-105 hover:text-[#d6d6d6] transition duration-300 ease-in-out"></i>
+                  <i className="fa-brands fa-square-github text-white text-3xl sm:text-5xl 2xl:text-7xl hover:cursor-pointer hover:transform hover:scale-105 2xl:hover:scale-110 hover:shadow-xl hover:text-[#d6d6d6] transition duration-300 ease-in-out"></i>
                 </a>
               </li>
               <li className="flex mt-1">
@@ -147,15 +149,15 @@ const Home = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fa-brands fa-linkedin text-white text-3xl sm:text-5xl hover:cursor-pointer hover:transform hover:scale-105 hover:text-[#d6d6d6] transition duration-300 ease-in-out"></i>
+                  <i className="fa-brands fa-linkedin text-white text-3xl sm:text-5xl 2xl:text-7xl hover:cursor-pointer hover:transform hover:scale-105 2xl:hover:scale-110 hover:shadow-xl hover:text-[#d6d6d6] transition duration-300 ease-in-out"></i>
                 </a>
               </li>
               <li
                 onClick={openModal}
-                className="border-black flex items-center justify-around h-[27px] sm:h-[43px] sm:mt-1 gap-2 px-3 sm:px-6 text-dgray bg-white rounded hover:cursor-pointer hover:transform hover:scale-105 hover:bg-[#d6d6d6] transition duration-300 ease-in-out"
+                className="border-black flex items-center justify-around text-xl 2xl:text-3xl h-[27px] sm:h-[43px] 2xl:h-[62px] sm:mt-1 gap-2 px-3 sm:px-6 2xl:px-12 text-dgray bg-white rounded hover:cursor-pointer hover:transform hover:scale-105 2xl:hover:scale-110 hover:shadow-xl hover:bg-[#d6d6d6] transition duration-300 ease-in-out"
               >
-                <i className="fas fa-envelope text-xl"></i>
-                <p className="text-xl font-semibold text-dgray">Contact</p>
+                <i className="fas fa-envelope"></i>
+                <p className="font-semibold text-dgray">Contact</p>
               </li>
             </motion.ul>
           </div>
@@ -221,7 +223,7 @@ const Home = () => {
           initial="hidden"
           animate="visible"
           variants={slideIn}
-          className="right-14 bottom-1/2 transform translate-y-1/2 md:w-[20rem] lg:w-[28rem] xl:w-[32rem] my-auto hidden md:block animate-fadeIn"
+          className="right-14 bottom-1/2 transform translate-y-1/2 md:w-[20rem] lg:w-[28rem] xl:w-[32rem] 2xl:w-[48rem] my-auto hidden md:block animate-fadeIn"
         >
           <Lottie animationData={heroBg} loop={true} />
         </motion.div>
