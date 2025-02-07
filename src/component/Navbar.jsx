@@ -172,7 +172,7 @@ const Navbar = () => {
             </p>
           </motion.h1>
         </div>
-        <div className="flex pl-5 pt-5 pb-8 rounded-bl-[2rem] bg-dgray elementxl">
+        <div className="flex pl-5 pt-5 pb-6 rounded-bl-[2rem] bg-dgray elementxl">
           <div className="element2xl">
             <ul className="flex gap-8 animate-fadeIn duration-500">
               <li className="flex text-white bg-white justify-center items-center text-2xl py-2 px-8 rounded-2xl gap-3">
