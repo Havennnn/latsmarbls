@@ -43,7 +43,7 @@ const StickyNavbar = () => {
         className={`h-8 2xl:h-12 px-8 2xl:px-12 bg-white transition-all duration-700 ease-linear rounded-[1.5rem] shadow-lg 
         ${
           isSticky
-            ? "fixed flex justify-between items-center top-2 inset-x-0 mx-auto z-10 scale-100 bg-opacity-90 backdrop-blur-sm w-[89.7%] md:w-[93%] shadow-2xl"
+            ? "fixed flex justify-between items-center top-2 inset-x-0 mx-auto z-10 scale-100 bg-opacity-90 backdrop-blur-sm w-[89.7%] md:w-[93%] 2xl:w-[93.3%] shadow-2xl"
             : "relative w-full scale-full flex justify-center items-center border"
         }`}
         style={{

@@ -37,7 +37,7 @@ const Project = () => {
                     href="https://login-auth-by4k.vercel.app"
                     className="flex items-center justify-center"
                   >
-                    <i className="fa-solid fa-globe hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
+                    <i className="fa-solid fa-globe text-dgray hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
                   </a>
                 </div>
               </div>
@@ -96,7 +96,7 @@ const Project = () => {
                     href="https://story-weaver-two.vercel.app"
                     className="flex items-center justify-center"
                   >
-                    <i className="fa-solid fa-globe hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
+                    <i className="fa-solid fa-globe text-dgray hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
                   </a>
                 </div>
               </div>
@@ -145,7 +145,7 @@ const Project = () => {
                     href="https://github.com/Havennnn/curatorArt"
                     className="text-dgray flex items-center justify-center rounded-full"
                   >
-                    <i className="fa-brands fa-github hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
+                    <i className="fa-brands fa-github text-dgray hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
                   </a>
                   <a
                     href="https://curator-art.vercel.app"
