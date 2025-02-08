@@ -31,7 +31,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-dgray text-white mt-10 flex flex-col items-center justify-center">
-      <img src="/Logo.svg" alt="logo" className="w-8 h-8 2xl:w-12 2xl:h-12" />
+      <img src="/LM.svg" alt="logo" className="w-8 h-8 2xl:w-12 2xl:h-12" />
       <div className="flex justify-center items-center flex-col mt-10 text-sm 2xl:text-xl">
         <ul className="flex items-center justify-center gap-5 text-white transition-all">
           <li
