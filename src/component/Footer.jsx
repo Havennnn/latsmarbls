@@ -102,8 +102,8 @@ const Footer = () => {
         </div>
 
         <h2 className="mt-4 pb-10 text-[12px] 2xl:text-lg">
-          <span className="font-semibold">©LatsMarbls</span> Portfolio, All
-          rights and reserve.
+          <span className="font-semibold">© LatsMarbls</span> Portfolio, All
+          rights and reserve
         </h2>
       </div>
     </footer>
