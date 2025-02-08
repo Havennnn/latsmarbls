@@ -61,7 +61,7 @@ const Footer = () => {
         </ul>
 
         <div className="mt-4">
-          <ul className="flex gap-5 text-2xl 2xl:text-4xl">
+          <ul className="flex gap-5 text-2xl 2xl:text-3xl">
             <li className="flex animate-fadeIn">
               <a
                 href="https://github.com/Havennnn"

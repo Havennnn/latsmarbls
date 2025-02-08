@@ -126,7 +126,7 @@ const Navbar = () => {
         <div className="flex pl-3 pt-3 pb-5 rounded-bl-[1.5rem] bg-dgray element">
           <div className="element2">
             <ul className="flex gap-1 lg:gap-6 animate-fadeIn duration-500">
-              <li className="flex text-white bg-white py-1 px-6 rounded-xl justify-center items-center gap-2 text-sm">
+              <li className="flex text-white bg-white py-2 px-6 rounded-xl justify-center items-center gap-2 text-sm">
                 <i className="fa-solid fa-house text-dgray cursor-default"></i>
                 <p className="font-semibold text-dgray cursor-default">Home</p>
               </li>

@@ -85,9 +85,9 @@ const About = () => {
         <div className="flex flex-col px-6 2xl:px-24 py-24 2xl:py-32 sm:px-14 text-dgray 2xl:text-2xl">
           <h1 className="font-bold text-3xl 2xl:text-5xl">Lets Connect!</h1>
           <p className="text-gray font-normal pl-30 w-5/6 pt-5">
-            Looking for a web developer? <br />
-            I’d love to hear about your project ideas, answer your questions, or
-            just have a chat. Let’s create something amazing together!
+            You can contact me through any of my social media profiles or email
+            me directly. I’m always open to new opportunities, and connections,
+            so don’t hesitate to get in touch.
           </p>
           <p className="text-gray font-bold pl-30 w-5/6 pt-5">
             <i className="fas fa-phone"></i> 0995-332-4941
@@ -96,7 +96,7 @@ const About = () => {
             <i className="fas fa-envelope"></i> marablelatrell@gmail.com
           </p>
           <p className="text-gray font-normal pl-30 w-5/6 pt-5 pb-3">
-            Or email me directly by pressing this:
+            You can email me directly through here:
           </p>
           <li
             onClick={openModal}
@@ -109,14 +109,14 @@ const About = () => {
 
         {showModal && (
           <div className="fixed inset-0 z-50 bg-dgray bg-opacity-50 flex justify-center items-center shadow">
-            <div className="bg-white p-6 rounded-lg w-96 shadow-xl">
+            <div className="bg-white p-6 rounded-[1.5rem] w-[42rem] shadow-xl">
               <div className="relative flex justify-between items-baseline mb-6">
-                <h2 className="text-3xl font-semibold text-gray-800 ">
+                <h2 className="text-3xl 2xl:text-5xl font-semibold text-gray-800 ">
                   Contact Me
                 </h2>
                 <button
                   onClick={closeModal}
-                  className="absolute right-0 mt-1 text-gray-600 text-white rounded-full bg-dgray w-7 h-7 flex justify-center items-center"
+                  className="absolute right-0 mt-1 text-gray-600 text-white rounded-full bg-dgray w-7 h-7 2xl:w-10 2xl:h-10 2xl:text-xl flex justify-center items-center hover:transform hover:scale-105 hover:bg-highlight transition duration-300 ease-in-out"
                 >
                   X
                 </button>
@@ -127,26 +127,26 @@ const About = () => {
                   type="text"
                   name="name"
                   placeholder="Enter name"
-                  className="w-full p-2 border border-gray-300 rounded-lg mb-4"
+                  className="w-full p-2 2xl:p-3 2xl:text-xl border border-gray-300 rounded-lg mb-4"
                   required
                 />
                 <input
                   type="email"
                   name="email"
                   placeholder="Enter email"
-                  className="w-full p-2 border border-gray-300 rounded-lg mb-4"
+                  className="w-full p-2 2xl:p-3 2xl:text-xl border border-gray-300 rounded-lg mb-4"
                   required
                 />
                 <textarea
                   name="message"
                   placeholder="Your message"
-                  className="w-full p-2 border border-gray-300 rounded-lg mb-4"
+                  className="w-full p-2 2xl:p-3 2xl:text-xl border border-gray-300 rounded-lg mb-4"
                   rows="4"
                   required
                 ></textarea>
                 <button
                   type="submit"
-                  className="w-full p-2 bg-dgray text-white rounded-xl hover:transform hover:scale-105 transition duration-300 ease-in-out"
+                  className="w-full p-2 2xl:p-3 2xl:text-xl bg-dgray text-white rounded-xl hover:transform hover:scale-105 hover:bg-highlight transition duration-300 ease-in-out"
                 >
                   Submit Form
                 </button>

@@ -86,17 +86,16 @@ const Skills = () => {
           <h1 className="text-xl pt-5 md:px-2 2xl:px-5 md:pt-5 lg:pt-2 md:text-[24px] lg:text-3xl 2xl:text-4xl px-1 text-dgray font-bold">
             What can I bring?
           </h1>
-          <p className="text-gray mt-2 md:mt-4 2xl:mt-6 px-1 md:px-2 2xl:px-5 flex flex-col tracking-tight 2xl:text-2xl">
-            I am a passionate web developer with a solid foundation in HTML,
-            CSS, JavaScript, and familiarity with React, MongoDB, and Tailwind
-            CSS. My hands-on experience includes completing certifications in
-            web development and cybersecurity, and working on team-based
-            projects where I developed strong organizational and problem-solving
-            skills. With a commitment to learning and a track record of adapting
-            to new technologies, I am eager to contribute innovative, impactful
-            solutions to your team while continuing to grow as a developer.
-            <span className="mt-5 2xl:mt-8 text-dgray text-xl 2xl:text-3xl font-semibold">
-              Let's work together!
+          <p className="text-gray mt-4 md:mt-6 2xl:mt-8 px-1 md:px-2 2xl:px-5 flex flex-col tracking-tight 2xl:text-2xl">
+            Throughout my learning journey, I initially relied on YouTube
+            tutorials and online searches to teach myself. Later, I came across
+            an online course by Angela Yu, which marked a turning point in my
+            web development skills. Through her course, I experienced
+            significant growth and built a solid foundation in web development.
+            This structured learning helped me deepen my understanding and
+            improve my ability to create my projects.
+            <span className="mt-6 pb-10 lg:pb-0 2xl:mt-12 text-dgray text-xl 2xl:text-3xl font-semibold">
+              😀 Let's work together!
             </span>
           </p>
         </div>

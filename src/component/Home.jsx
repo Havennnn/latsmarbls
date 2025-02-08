@@ -99,13 +99,13 @@ const Home = () => {
             I'm Latrell
           </h1>
           <p className="font-bold text-2xl 2xl:text-4xl text-gray animate-pulse">
-            WEB AND APP DEVELOPER
+            WEB DEVELOPER
           </p>
           <p className="text-dgray 2xl:text-2xl tracking-tight">
-            I am a passionate and innovative web developer with a knack for
-            creating captivating and functional websites. With a blend of
-            creativity and technical expertise, I bring digital ideas to life
-            and deliver seamless online experiences.
+            I am applying for an internship to receive hands-on training and
+            learn from experienced professionals. I am eager to improve my
+            skills in web and app development and gain practical knowledge that
+            will help me grow in the field
           </p>
 
           <div className="py-4 flex items-center gap-3">
@@ -165,16 +165,16 @@ const Home = () => {
 
         {showModal && (
           <div className="fixed inset-0 z-50 bg-dgray bg-opacity-50 flex justify-center items-center shadow">
-            <div className="bg-white p-6 rounded-lg w-96 shadow-xl">
+            <div className="bg-white p-6 rounded-[1.5rem] w-[42rem] shadow-xl">
               <div className="relative flex justify-between items-baseline mb-6">
-                <h2 className="text-3xl font-semibold text-gray-800 ">
+                <h2 className="text-3xl 2xl:text-5xl font-semibold text-gray-800 ">
                   Contact Me
                 </h2>
                 <button
                   onClick={closeModal}
-                  className="absolute right-0 mt-1 text-white rounded-full bg-dgray w-7 h-7 flex justify-center items-center hover:bg-highlight"
+                  className="absolute right-0 mt-1 text-gray-600 text-white rounded-full bg-dgray w-7 h-7 2xl:w-10 2xl:h-10 2xl:text-xl flex justify-center items-center hover:transform hover:scale-105 hover:bg-highlight transition duration-300 ease-in-out"
                 >
-                  x
+                  X
                 </button>
               </div>
 
@@ -183,26 +183,26 @@ const Home = () => {
                   type="text"
                   name="name"
                   placeholder="Enter name"
-                  className="w-full p-2 border border-gray-300 rounded-lg mb-4"
+                  className="w-full p-2 2xl:p-3 2xl:text-xl border border-gray-300 rounded-lg mb-4"
                   required
                 />
                 <input
                   type="email"
                   name="email"
                   placeholder="Enter email"
-                  className="w-full p-2 border border-gray-300 rounded-lg mb-4"
+                  className="w-full p-2 2xl:p-3 2xl:text-xl border border-gray-300 rounded-lg mb-4"
                   required
                 />
                 <textarea
                   name="message"
                   placeholder="Your message"
-                  className="w-full p-2 border border-gray-300 rounded-lg mb-4"
+                  className="w-full p-2 2xl:p-3 2xl:text-xl border border-gray-300 rounded-lg mb-4"
                   rows="4"
                   required
                 ></textarea>
                 <button
                   type="submit"
-                  className="w-full p-2 bg-dgray text-white rounded-xl hover:bg-highlight transition duration-300 ease-in-out"
+                  className="w-full p-2 2xl:p-3 2xl:text-xl bg-dgray text-white rounded-xl hover:transform hover:scale-105 hover:bg-highlight transition duration-300 ease-in-out"
                 >
                   Submit Form
                 </button>
