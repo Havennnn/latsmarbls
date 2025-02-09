@@ -99,7 +99,7 @@ const Home = () => {
             I'm Latrell
           </h1>
           <p className="font-bold text-2xl 2xl:text-4xl text-gray animate-pulse">
-            WEB DEVELOPER
+            WEB and APP DEVELOPER
           </p>
           <p className="text-dgray 2xl:text-2xl tracking-tight">
             I am applying for an internship to receive hands-on training and

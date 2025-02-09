@@ -35,7 +35,7 @@ const SkillsBox = () => {
           <div className="w-24 pt-2 pb-4 2xl:w-32">
             <Lottie animationData={cyberSec} loop={true} />
           </div>
-          <h1 className="font-bold text-center 2xl:text-2xl">Cybersecurity</h1>
+          <h1 className="font-bold text-center 2xl:text-2xl">Solutions</h1>
           <p className="pt-1 font-normal text-center pb-3 text-[10px] md:text-[12px] 2xl:text-xl">
             Implementing secure practices to protect applications and user data.
           </p>
