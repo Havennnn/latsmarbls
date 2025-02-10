@@ -29,21 +29,25 @@ const Skills = () => {
               <h1 className="text-white font-medium text-xl 2xl:text-3xl pt-6">
                 Frontend Frameworks
               </h1>
-              <Skill name="React.js" level="70%" />
+              <Skill name="React" level="70%" />
+              <Skill name="Next" level="65%" />
+              <Skill name="React Native" level="70%" />
             </div>
           )}
 
           {currentPage === 2 && (
             <div className="flex flex-col h-[280px] lg:h-full animate-fadeIn">
-              <Skill name="Next.js" level="65%" />
               <h1 className="text-white font-medium text-xl 2xl:text-3xl pt-3">
                 Backend Framework
               </h1>
+              <Skill name="PHP" level="75%" />
               <Skill name="Node.js" level="75%" />
               <Skill name="Express.js" level="75%" />
+              <Skill name="Laravel" level="70%" />
               <h1 className="text-white font-medium text-xl 2xl:text-3xl pt-3">
                 Database
               </h1>
+              <Skill name="MySQL" level="80%" />
               <Skill name="MongoDB" level="70%" />
               <Skill name="PostgreSQL" level="60%" />
             </div>
@@ -84,17 +88,21 @@ const Skills = () => {
             </h1>
           </div>
           <h1 className="text-xl pt-5 md:px-2 2xl:px-5 md:pt-5 lg:pt-2 md:text-[24px] lg:text-3xl 2xl:text-4xl px-1 text-dgray font-bold">
-            What can I bring?
+            My Journey
           </h1>
           <p className="text-gray mt-4 md:mt-6 2xl:mt-8 px-1 md:px-2 2xl:px-5 flex flex-col tracking-tight 2xl:text-2xl">
-            Throughout my learning journey, I initially relied on YouTube
-            tutorials and online searches to teach myself. Later, I came across
-            an online course by Angela Yu, which marked a turning point in my
-            web development skills. Through her course, I experienced
-            significant growth and built a solid foundation in web development.
-            This structured learning helped me deepen my understanding and
-            improve my ability to create my projects.
-            <span className="mt-6 pb-10 lg:pb-0 2xl:mt-12 text-dgray text-xl 2xl:text-3xl font-semibold">
+            I started learning web development through YouTube tutorials and
+            online searches, which helped me grasp the basics of HTML, CSS, and
+            JavaScript. However, I struggled with the lack of structure and felt
+            stuck. Everything changed when I found Angela Yu’s online course.
+            Her structured lessons and hands-on projects helped me build a solid
+            foundation and gain confidence in my skills. This marked a turning
+            point, allowing me to create more complex projects and grow as a
+            developer. I learned how to think critically and solve problems
+            independently, which made me more confident in tackling real-world
+            challenges. Now, I feel equipped to continue learning and building
+            projects that truly reflect my creativity and passion.
+            <span className="mt-6 pb-10 lg:pb-0 text-dgray text-xl 2xl:text-3xl font-semibold">
               😀 Let's work together!
             </span>
           </p>
@@ -127,6 +135,10 @@ const Skill = ({ name, level }) => {
       "Express.js": "devicon-express-original",
       MongoDB: "devicon-mongodb-plain",
       PostgreSQL: "devicon-postgresql-plain",
+      PHP: "devicon-php-plain",
+      Laravel: "devicon-laravel-original",
+      "React Native": "devicon-react-original",
+      MySQL: "devicon-mysql-original",
     };
     return iconMap[name] || "devicon-devicon-plain";
   };
