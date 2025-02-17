@@ -18,7 +18,7 @@ const Skills = () => {
         {/* Skill Section */}
         <div className="flex flex-col h-full w-full md:w-2/4">
           {currentPage === 1 && (
-            <div className="flex flex-col h-[280px] lg:h-full animate-fadeIn">
+            <div className="flex flex-col h-[380px] lg:h-full animate-fadeIn">
               <h1 className="text-white font-medium text-xl 2xl:text-3xl">
                 Web Technologies
               </h1>
@@ -36,7 +36,7 @@ const Skills = () => {
           )}
 
           {currentPage === 2 && (
-            <div className="flex flex-col h-[280px] lg:h-full animate-fadeIn">
+            <div className="flex flex-col h-[380px] lg:h-full animate-fadeIn">
               <h1 className="text-white font-medium text-xl 2xl:text-3xl pt-3">
                 Backend Framework
               </h1>
