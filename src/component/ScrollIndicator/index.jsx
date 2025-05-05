@@ -4,8 +4,11 @@ import ScrollIndicatorText from "./ScrollIndicatorText";
 import ProgressIndicator from "./ProgressIndicator";
 
 const ScrollIndicator = ({ showProgress = true }) => {
-  const { isBottom, scrollPercentage, hasStartedScrolling } =
+  const { isBottom, scrollPercentage, hasStartedScrolling, isInitialized } =
     useScrollPosition();
+
+  // Only render the component once initialization is complete
+  if (!isInitialized) return null;
 
   return (
     <>
