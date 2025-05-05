@@ -1,6 +1,5 @@
 import React from "react";
 import { HashRouter } from "react-router-dom";
-import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./component/Navbar";
 import Home from "./component/Home";
 import Skills from "./component/Skills.jsx";
@@ -8,7 +7,7 @@ import SkillsBox from "./component/SkillsBox.jsx";
 import About from "./component/About.jsx";
 import Project from "./component/Project.jsx";
 import Footer from "./component/Footer.jsx";
-import ScrollIndicator from "./component/ScrollIndicator.jsx";
+import ScrollIndicator from "./component/ScrollIndicator";
 import StickyNavbar from "./component/StickyNavbar.jsx";
 import Preloader from "./component/Preloader";
 
@@ -38,7 +37,6 @@ const App = () => {
 
   return (
     <HashRouter>
-      <Analytics debug={true} />
       <Preloader
         loadingDuration={2500}
         welcomeDuration={2000}

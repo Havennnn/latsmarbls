@@ -5,10 +5,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
 
-  optimizeDeps: {
-    include: ['@vercel/analytics/react']
-  },
-
   build: {
     rollupOptions: {
       output: {
