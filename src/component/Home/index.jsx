@@ -45,13 +45,10 @@ const Home = () => {
         className="h-[700px] xl:h-[93vh] bg-white transition-all duration-500 ease-in-out rounded-tl-[1.5rem] rounded-br-[1.5rem]"
       >
         <div className="relative flex h-full">
-          {/* Left side content */}
           <HeroContent handleDownloadCV={handleDownloadCV} />
 
-          {/* Social links */}
           <SocialLinks openModal={openModal} />
 
-          {/* Contact modal */}
           <ContactModal
             showModal={showModal}
             closeModal={closeModal}
@@ -59,7 +56,6 @@ const Home = () => {
             onSubmit={onSubmit}
           />
 
-          {/* Hero animation */}
           <Hero />
         </div>
       </motion.section>
