@@ -4,9 +4,6 @@ import PreloaderCircle from "./PreloaderCircle";
 import WelcomeScreen from "./WelcomeScreen";
 import usePreloader from "./usePreloader";
 
-/**
- * Main Preloader component that handles loading animations and transitions
- */
 const Preloader = ({
   children,
   logoSrc = "/Logo.svg",
@@ -32,7 +29,6 @@ const Preloader = ({
     },
   };
 
-  // If loading is complete, render the main content with animation
   if (complete) {
     return (
       <motion.div initial="hidden" animate="visible" variants={contentVariants}>
@@ -44,10 +40,8 @@ const Preloader = ({
   return (
     <div className="relative w-full h-screen">
       <AnimatePresence mode="wait">
-        {/* Loading spinner animation */}
         {loading && <PreloaderCircle key="preloader" logoSrc={logoSrc} />}
 
-        {/* Welcome screen animation */}
         {showWelcome && (
           <WelcomeScreen
             key="welcome"
