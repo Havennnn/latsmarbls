@@ -50,7 +50,6 @@ const useContactForm = () => {
     }
   };
 
-  // Handle modal keyboard events and body scroll
   useEffect(() => {
     if (showModal) {
       document.body.style.overflow = "hidden";

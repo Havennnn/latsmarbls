@@ -43,9 +43,49 @@ const HeroContent = ({ handleDownloadCV }) => {
     hover: {
       scale: 1.05,
       backgroundColor: "#4d7aff",
+      boxShadow:
+        "0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1)",
       transition: { duration: 0.3 },
     },
-    tap: { scale: 0.95 },
+    tap: {
+      scale: 0.95,
+      backgroundColor: "#3d6ae0",
+      transition: { duration: 0.1 },
+    },
+  };
+
+  const buttonContainerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+        delayChildren: 1.2,
+        duration: 0.3,
+      },
+    },
+  };
+
+  const iconAnimation = {
+    hidden: { scale: 0, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 500,
+        damping: 15,
+        delay: 0.1,
+      },
+    },
+    hover: {
+      rotate: [0, -10, 10, -10, 0],
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
   };
 
   return (
@@ -83,7 +123,10 @@ const HeroContent = ({ handleDownloadCV }) => {
         in the field
       </motion.p>
 
-      <div className="py-4 flex items-center gap-3">
+      <motion.div
+        className="py-4 flex items-center gap-3"
+        variants={buttonContainerVariants}
+      >
         <motion.button
           variants={buttonVariants}
           whileHover="hover"
@@ -91,7 +134,11 @@ const HeroContent = ({ handleDownloadCV }) => {
           className="flex items-center justify-center w-32 2xl:w-40 gap-2 p-2 2xl:p-3 text-white text-sm 2xl:text-xl bg-dgray rounded-xl 2xl:rounded-2xl shadow-xl transition duration-300 ease-in-out"
           onClick={handleDownloadCV}
         >
-          <i className="fa-solid fa-file-arrow-down text-white"></i>
+          <motion.i
+            variants={iconAnimation}
+            whileHover="hover"
+            className="fa-solid fa-file-arrow-down text-white"
+          ></motion.i>
           Resume
         </motion.button>
 
@@ -102,10 +149,14 @@ const HeroContent = ({ handleDownloadCV }) => {
           href="#projects"
           className="flex items-center justify-center w-32 2xl:w-40 gap-2 p-2 2xl:p-3 text-white text-sm 2xl:text-xl bg-dgray rounded-xl 2xl:rounded-2xl shadow-xl transition duration-300 ease-in-out"
         >
-          <i className="fa-solid fa-folder text-white"></i>
+          <motion.i
+            variants={iconAnimation}
+            whileHover="hover"
+            className="fa-solid fa-folder text-white"
+          ></motion.i>
           Projects
         </motion.a>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
