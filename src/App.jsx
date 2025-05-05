@@ -1,5 +1,6 @@
 import React from "react";
 import { HashRouter } from "react-router-dom";
+import { Analytics } from "@vercel/analytics";
 import Navbar from "./component/Navbar";
 import Home from "./component/Home";
 import Skills from "./component/Skills.jsx";
@@ -47,6 +48,7 @@ const App = () => {
       >
         <MainContent />
       </Preloader>
+      <Analytics />
     </HashRouter>
   );
 };
