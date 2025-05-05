@@ -28,19 +28,17 @@ export const useScrollPosition = () => {
   }, [hasStartedScrolling]);
 
   useEffect(() => {
-    // Set a small delay before initializing to allow page to settle
     const initTimer = setTimeout(() => {
       setIsInitialized(true);
-      handleScroll(); // Initial calculation
+      handleScroll();
     }, 100);
 
     const scrollListener = () => {
-      // Use requestAnimationFrame for smoother performance
       window.requestAnimationFrame(handleScroll);
     };
 
     window.addEventListener("scroll", scrollListener);
-    window.addEventListener("resize", handleScroll); // Also handle resize events
+    window.addEventListener("resize", handleScroll);
 
     return () => {
       clearTimeout(initTimer);
