@@ -1,25 +1,43 @@
 import React from "react";
 import { useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { gsap } from "gsap";
 
 const MobileMenu = ({ isMenuOpen, scrollToSection }) => {
   const menuRef = useRef(null);
 
   useEffect(() => {
-    if (isMenuOpen) {
-      gsap.to(menuRef.current, {
-        x: 0,
-        duration: 0.5,
-        ease: "power4.out",
-      });
-    } else {
-      gsap.to(menuRef.current, {
-        x: "160%",
-        duration: 0.1,
-        ease: "power4.in",
-      });
+    if (menuRef.current) {
+      if (isMenuOpen) {
+        gsap.to(menuRef.current, {
+          x: 0,
+          duration: 0.5,
+          ease: "power4.out",
+        });
+      } else {
+        gsap.to(menuRef.current, {
+          x: "160%",
+          duration: 0.2,
+          ease: "power4.in",
+        });
+      }
     }
   }, [isMenuOpen]);
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: 20 },
+    visible: (custom) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 24,
+        delay: 0.3 + custom * 0.1,
+      },
+    }),
+    tap: { scale: 0.95 },
+  };
 
   return (
     <div
@@ -27,32 +45,68 @@ const MobileMenu = ({ isMenuOpen, scrollToSection }) => {
       style={{ transform: "translateX(100%)" }}
       className="bg-dgray text-white px-2 absolute rounded-bl-[1rem] right-0 top-[60px] z-20 transition-all duration-500 ease-in-out block lg:hidden element8"
     >
-      <ul className="flex flex-col pt-2 pb-5 gap-5">
-        <li
-          className="flex text-white justify-around items-center hover:transform hover:scale-105 transition ease-in-out duration-300"
-          onClick={() => scrollToSection("home")}
-        >
-          <i className="fa-solid fa-house text-xl text-white"></i>
-        </li>
-        <li
-          className="flex text-white justify-around items-center hover:transform hover:scale-105 transition ease-in-out duration-300"
-          onClick={() => scrollToSection("skills")}
-        >
-          <i className="fa-solid fa-code text-xl text-white"></i>
-        </li>
-        <li
-          className="flex gap-2 text-white justify-around items-center hover:transform hover:scale-105 hover:cursor-pointer transition ease-in-out duration-300"
-          onClick={() => scrollToSection("contact")}
-        >
-          <i className="fa-solid fa-phone text-xl text-white"></i>
-        </li>
-        <li
-          className="flex gap-2 text-white justify-around items-center hover:transform hover:scale-105 transition ease-in-out duration-300"
-          onClick={() => scrollToSection("projects")}
-        >
-          <i className="fa-solid fa-folder text-xl text-white"></i>
-        </li>
-      </ul>
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.ul
+            className="flex flex-col pt-2 pb-5 gap-5"
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+          >
+            <motion.li
+              custom={0}
+              variants={itemVariants}
+              whileTap="tap"
+              className="flex text-white justify-around items-center transition ease-in-out duration-300"
+              onClick={() => scrollToSection("home")}
+            >
+              <motion.i
+                whileHover={{ scale: 1.2 }}
+                className="fa-solid fa-house text-xl text-white"
+              />
+            </motion.li>
+
+            <motion.li
+              custom={1}
+              variants={itemVariants}
+              whileTap="tap"
+              className="flex text-white justify-around items-center transition ease-in-out duration-300"
+              onClick={() => scrollToSection("skills")}
+            >
+              <motion.i
+                whileHover={{ scale: 1.2 }}
+                className="fa-solid fa-code text-xl text-white"
+              />
+            </motion.li>
+
+            <motion.li
+              custom={2}
+              variants={itemVariants}
+              whileTap="tap"
+              className="flex gap-2 text-white justify-around items-center hover:cursor-pointer transition ease-in-out duration-300"
+              onClick={() => scrollToSection("contact")}
+            >
+              <motion.i
+                whileHover={{ scale: 1.2 }}
+                className="fa-solid fa-phone text-xl text-white"
+              />
+            </motion.li>
+
+            <motion.li
+              custom={3}
+              variants={itemVariants}
+              whileTap="tap"
+              className="flex gap-2 text-white justify-around items-center transition ease-in-out duration-300"
+              onClick={() => scrollToSection("projects")}
+            >
+              <motion.i
+                whileHover={{ scale: 1.2 }}
+                className="fa-solid fa-folder text-xl text-white"
+              />
+            </motion.li>
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
