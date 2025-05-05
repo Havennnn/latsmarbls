@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const TechItem = ({ name }) => {
   const getDeviconClass = (name) => {
@@ -24,13 +25,57 @@ const TechItem = ({ name }) => {
     return iconMap[name] || "devicon-devicon-plain";
   };
 
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 24,
+      },
+    },
+    hover: {
+      scale: 1.05,
+      x: 10,
+      backgroundColor: "rgba(255, 255, 255, 0.1)",
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 10,
+      },
+    },
+    tap: { scale: 0.98 },
+  };
+
+  const iconVariants = {
+    hover: {
+      rotate: [0, -10, 10, -10, 0],
+      scale: 1.2,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <div className="flex items-center gap-2 my-2 transition-all duration-300 hover:translate-x-1">
-      <i
-        className={`${getDeviconClass(name)} text-white text-lg 2xl:text-2xl`}
-      ></i>
-      <p className="text-white 2xl:text-2xl">{name}</p>
-    </div>
+    <motion.div
+      className="flex items-center gap-3 my-2 px-3 py-2 rounded-lg backdrop-blur-sm"
+      variants={itemVariants}
+      initial="hidden"
+      animate="visible"
+      whileHover="hover"
+      whileTap="tap"
+    >
+      <motion.div variants={iconVariants} className="bg-dgray p-2 rounded-md">
+        <i
+          className={`${getDeviconClass(name)} text-white text-lg 2xl:text-2xl`}
+        ></i>
+      </motion.div>
+      <p className="text-white 2xl:text-2xl font-medium">{name}</p>
+    </motion.div>
   );
 };
 
