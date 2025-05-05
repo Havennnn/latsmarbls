@@ -11,6 +11,9 @@ import ScrollIndicator from "./component/ScrollIndicator";
 import StickyNavbar from "./component/StickyNavbar.jsx";
 import Preloader from "./component/Preloader";
 
+// Force refresh with build version
+const BUILD_VERSION = Date.now();
+
 const App = () => {
   const MainContent = () => (
     <div
@@ -40,8 +43,8 @@ const App = () => {
       <Preloader
         loadingDuration={2500}
         welcomeDuration={2000}
-        logoSrc="/Logo.svg"
-        welcomeLogoSrc="/LogoFilled.svg"
+        logoSrc={`/Logo.svg?v=${BUILD_VERSION}`}
+        welcomeLogoSrc={`/LogoFilled.svg?v=${BUILD_VERSION}`}
         primaryText="Lats"
         secondaryText="Marbls"
       >
