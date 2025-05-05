@@ -8,10 +8,9 @@ import About from "./component/About.jsx";
 import Project from "./component/Project.jsx";
 import Footer from "./component/Footer.jsx";
 import ScrollIndicator from "./component/ScrollIndicator";
-import StickyNavbar from "./component/StickyNavbar.jsx";
+import StickyNavbar from "./component/StickyNavbar/index.jsx";
 import Preloader from "./component/Preloader";
 
-// Force refresh with build version
 const BUILD_VERSION = Date.now();
 
 const App = () => {
