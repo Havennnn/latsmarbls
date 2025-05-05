@@ -38,7 +38,7 @@ const App = () => {
 
   return (
     <HashRouter>
-      <Analytics />
+      <Analytics debug={true} />
       <Preloader
         loadingDuration={2500}
         welcomeDuration={2000}
