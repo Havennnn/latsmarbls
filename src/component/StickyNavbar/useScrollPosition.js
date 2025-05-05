@@ -5,6 +5,8 @@ const useScrollPosition = (placeholderRef) => {
   const [scrollDirection, setScrollDirection] = useState("none");
   const [scrollProgress, setScrollProgress] = useState(0);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [scrollTriggerReached, setScrollTriggerReached] = useState(false);
 
   useEffect(() => {
     setLastScrollY(window.scrollY);
@@ -14,6 +16,16 @@ const useScrollPosition = (placeholderRef) => {
 
       const navbarTop = placeholderRef.current.getBoundingClientRect().top;
       const currentScrollY = window.scrollY;
+
+      // Determine if we've scrolled enough to trigger the animation
+      // Typically we want this to happen before the navbar becomes sticky
+      const scrollTriggerPoint = 100; // pixels scrolled before animation triggers
+      if (currentScrollY > scrollTriggerPoint && !scrollTriggerReached) {
+        setScrollTriggerReached(true);
+        setIsVisible(true);
+      } else if (currentScrollY <= scrollTriggerPoint && scrollTriggerReached) {
+        setScrollTriggerReached(false);
+      }
 
       if (currentScrollY > lastScrollY) {
         setScrollDirection("down");
@@ -37,9 +49,9 @@ const useScrollPosition = (placeholderRef) => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [placeholderRef, lastScrollY]);
+  }, [placeholderRef, lastScrollY, scrollTriggerReached]);
 
-  return { isSticky, scrollDirection, scrollProgress };
+  return { isSticky, scrollDirection, scrollProgress, isVisible, scrollTriggerReached };
 };
 
 export default useScrollPosition; 

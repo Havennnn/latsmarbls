@@ -8,8 +8,13 @@ import scrollToSection from "./ScrollHelper";
 const StickyNavbar = () => {
   const placeholderRef = useRef(null);
   const navbarRef = useRef(null);
-  const { isSticky, scrollDirection, scrollProgress } =
-    useScrollPosition(placeholderRef);
+  const {
+    isSticky,
+    scrollDirection,
+    scrollProgress,
+    isVisible,
+    scrollTriggerReached,
+  } = useScrollPosition(placeholderRef);
 
   // Variants for sticky navbar animations
   const stickyVariants = {
@@ -53,8 +58,35 @@ const StickyNavbar = () => {
     },
   };
 
+  // Scroll-triggered animation
+  const initialEntryVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0.9,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 200,
+        damping: 20,
+        delay: 0.1,
+        when: "beforeChildren",
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   return (
-    <div className="relative flex justify-center items-center mt-10">
+    <motion.div
+      className="relative flex justify-center items-center mt-10"
+      initial="hidden"
+      animate={scrollTriggerReached ? "visible" : "hidden"}
+      variants={initialEntryVariants}
+    >
       <div ref={placeholderRef} className="h-12"></div>
 
       <AnimatePresence mode="wait">
@@ -93,7 +125,7 @@ const StickyNavbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 };
 
