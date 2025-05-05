@@ -7,75 +7,84 @@ const PaginationControls = ({
   onNext,
   onPrevious,
 }) => {
-  // Button animation variants
   const buttonVariants = {
-    initial: { scale: 0, opacity: 0 },
-    animate: {
+    hidden: { scale: 0, opacity: 0 },
+    visible: {
       scale: 1,
       opacity: 1,
       transition: {
         type: "spring",
-        stiffness: 500,
-        damping: 25,
-        delay: 0.5,
+        stiffness: 600,
+        damping: 20,
+        delay: 0.1,
       },
     },
     hover: {
       scale: 1.1,
+      backgroundColor: "#FFFFFF",
+      color: "#1E1E1E",
       transition: {
         type: "spring",
-        stiffness: 400,
+        stiffness: 500,
         damping: 10,
       },
     },
     tap: { scale: 0.9 },
     disabled: {
       scale: 0.95,
-      opacity: 0.5,
-      transition: { duration: 0.2 },
+      opacity: 0.3,
+      transition: { duration: 0.15 },
+    },
+  };
+
+  const controlsVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 25,
+        delay: 0.1,
+        staggerChildren: 0.05,
+      },
     },
   };
 
   return (
-    <div className="flex gap-4 mt-4 justify-end md:pb-0">
+    <motion.div
+      className="flex gap-4 justify-end items-center pb-3 mt-4"
+      variants={controlsVariants}
+    >
       <motion.button
         onClick={onPrevious}
         variants={buttonVariants}
-        initial="initial"
-        animate={currentPage === 1 ? "disabled" : "animate"}
         whileHover={currentPage === 1 ? "" : "hover"}
         whileTap={currentPage === 1 ? "" : "tap"}
-        className={`flex items-center justify-center p-3 2xl:p-5 bg-dgray text-white rounded-full shadow transition-all duration-500 ease-in-out ${
+        animate={currentPage === 1 ? "disabled" : undefined}
+        className={`flex items-center justify-center w-12 h-12 bg-white bg-opacity-20 backdrop-blur-sm text-white rounded-full shadow-lg border border-white border-opacity-30 ${
           currentPage === 1 ? "cursor-not-allowed" : ""
         }`}
         disabled={currentPage === 1}
       >
-        <img
-          src="/leftIcon.svg"
-          className="w-3 h-3 2xl:w-5 2xl:h-5"
-          alt="Previous"
-        />
+        <i className="fa-solid fa-chevron-left text-xl"></i>
       </motion.button>
 
       <motion.button
         onClick={onNext}
         variants={buttonVariants}
-        initial="initial"
-        animate={currentPage === totalPages ? "disabled" : "animate"}
         whileHover={currentPage === totalPages ? "" : "hover"}
         whileTap={currentPage === totalPages ? "" : "tap"}
-        className={`flex items-center justify-center p-3 2xl:p-5 bg-dgray text-white rounded-full shadow transition-all duration-500 ease-in-out ${
+        animate={currentPage === totalPages ? "disabled" : undefined}
+        className={`flex items-center justify-center w-12 h-12 bg-white bg-opacity-20 backdrop-blur-sm text-white rounded-full shadow-lg border border-white border-opacity-30 ${
           currentPage === totalPages ? "cursor-not-allowed" : ""
         }`}
         disabled={currentPage === totalPages}
       >
-        <img
-          src="/rightIcon.svg"
-          className="w-3 h-3 2xl:w-5 2xl:h-5"
-          alt="Next"
-        />
+        <i className="fa-solid fa-chevron-right text-xl"></i>
       </motion.button>
-    </div>
+    </motion.div>
   );
 };
 

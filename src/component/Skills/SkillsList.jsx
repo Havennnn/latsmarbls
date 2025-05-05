@@ -30,32 +30,40 @@ const SkillsList = () => {
       x: 0,
       opacity: 1,
       transition: {
-        x: { type: "spring", stiffness: 300, damping: 30 },
-        opacity: { duration: 0.2 },
+        x: { type: "spring", stiffness: 350, damping: 30 },
+        opacity: { duration: 0.15 },
       },
     },
     exit: (direction) => ({
       x: direction > 0 ? -500 : 500,
       opacity: 0,
       transition: {
-        x: { type: "spring", stiffness: 300, damping: 30 },
-        opacity: { duration: 0.2 },
+        x: { type: "spring", stiffness: 350, damping: 30 },
+        opacity: { duration: 0.15 },
       },
     }),
   };
 
-  return (
-    <div className="flex flex-col h-full w-full md:w-2/4">
-      <motion.h2
-        className="text-white text-2xl font-bold mb-4"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
-      >
-        My Technology Stack
-      </motion.h2>
+  const listVariants = {
+    hidden: { opacity: 0, x: -30 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 20,
+        delay: 0.05,
+      },
+    },
+  };
 
-      <div className="relative overflow-hidden">
+  return (
+    <motion.div
+      className="flex flex-col h-full w-full md:w-2/4"
+      variants={listVariants}
+    >
+      <div className="relative h-[320px]">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={currentPage}
@@ -64,19 +72,22 @@ const SkillsList = () => {
             initial="enter"
             animate="center"
             exit="exit"
+            className="absolute w-full h-full"
           >
             <SkillsPage pageNumber={currentPage} />
           </motion.div>
         </AnimatePresence>
       </div>
 
-      <PaginationControls
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onNext={handleNext}
-        onPrevious={handlePrevious}
-      />
-    </div>
+      <div className="mt-auto">
+        <PaginationControls
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onNext={handleNext}
+          onPrevious={handlePrevious}
+        />
+      </div>
+    </motion.div>
   );
 };
 
