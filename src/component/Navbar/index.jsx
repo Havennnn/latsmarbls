@@ -7,9 +7,6 @@ import LargeDesktopMenu from "./LargeDesktopMenu";
 import useNavigation from "./useNavigation";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-/**
- * Responsive Navbar component with enhanced animations
- */
 const Navbar = () => {
   const { isMenuOpen, toggleMenu, scrollToSection } = useNavigation();
 
@@ -45,21 +42,17 @@ const Navbar = () => {
         exit="exit"
         variants={navbarVariants}
       >
-        {/* Mobile Components */}
         <MobileHeader toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
         <MobileMenu isMenuOpen={isMenuOpen} scrollToSection={scrollToSection} />
 
-        {/* Desktop Components */}
         <DesktopMenu scrollToSection={scrollToSection} />
 
-        {/* Large Desktop Components */}
         <LargeDesktopMenu scrollToSection={scrollToSection} />
       </motion.div>
     </AnimatePresence>
   );
 };
 
-// Export individual components for more flexibility
 export {
   MobileHeader,
   MobileMenu,
@@ -68,5 +61,4 @@ export {
   useNavigation,
 };
 
-// Export the main component as default
 export default Navbar;

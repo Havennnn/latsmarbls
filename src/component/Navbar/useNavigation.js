@@ -15,7 +15,6 @@ const useNavigation = () => {
         top: sectionTop - offset,
         behavior: "smooth",
       });
-      // Close menu after navigation on mobile
       setIsMenuOpen(false);
     }
   };
