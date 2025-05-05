@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import NavItem from "./NavItem";
 
 const navItems = [
@@ -9,18 +10,33 @@ const navItems = [
 ];
 
 const NavLinks = ({ isMobile, scrollToSection }) => {
+  // Container animation for staggered children
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.07,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
   return (
     <div
       className={`justify-between items-center ${
         isMobile ? "flex md:hidden" : "hidden md:flex"
       }`}
     >
-      <ul
+      <motion.ul
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
         className={`flex ${
           isMobile ? "gap-1" : "gap-2"
         } text-dgray transition-all`}
       >
-        {navItems.map((item) => (
+        {navItems.map((item, index) => (
           <NavItem
             key={item.id}
             icon={item.icon}
@@ -30,7 +46,7 @@ const NavLinks = ({ isMobile, scrollToSection }) => {
             isMobile={isMobile}
           />
         ))}
-      </ul>
+      </motion.ul>
     </div>
   );
 };
