@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import SkillItem from "./SkillItem";
-import useSkillsBoxAnimation from "./useSkillsBoxAnimation";
-import { skillsData } from "./skillsData";
+import SkillItem from "./ui/SkillItem";
+import useSkillsBoxAnimation from "./hooks/useSkillsBoxAnimation";
+import { skillsData } from "./data/skillsData";
 
 const SkillsBox = () => {
   const sectionRef = useRef(null);
