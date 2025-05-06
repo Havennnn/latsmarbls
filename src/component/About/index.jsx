@@ -101,7 +101,7 @@ const About = () => {
   return (
     <motion.div
       ref={sectionRef}
-      className="flex mt-10 justify-center items-center"
+      className="flex justify-center items-center"
       initial={{ opacity: 0 }}
       animate={{
         opacity: scrollTriggerReached ? 1 : 0,
@@ -126,6 +126,7 @@ const About = () => {
           <ContactInfo openModal={openModal} />
           <SocialLinks />
         </motion.div>
+
         <motion.div variants={itemVariants}>
           <HeroAnimation />
         </motion.div>
