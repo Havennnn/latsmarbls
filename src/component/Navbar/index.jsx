@@ -1,10 +1,10 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import MobileHeader from "./MobileHeader";
-import MobileMenu from "./MobileMenu";
-import DesktopMenu from "./DesktopMenu";
-import LargeDesktopMenu from "./LargeDesktopMenu";
-import useNavigation from "./useNavigation";
+import MobileHeader from "./ui/MobileHeader";
+import MobileMenu from "./ui/MobileMenu";
+import DesktopMenu from "./ui/DesktopMenu";
+import LargeDesktopMenu from "./ui/LargeDesktopMenu";
+import useNavigation from "./hooks/useNavigation";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Navbar = () => {
@@ -44,21 +44,11 @@ const Navbar = () => {
       >
         <MobileHeader toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
         <MobileMenu isMenuOpen={isMenuOpen} scrollToSection={scrollToSection} />
-
         <DesktopMenu scrollToSection={scrollToSection} />
-
         <LargeDesktopMenu scrollToSection={scrollToSection} />
       </motion.div>
     </AnimatePresence>
   );
-};
-
-export {
-  MobileHeader,
-  MobileMenu,
-  DesktopMenu,
-  LargeDesktopMenu,
-  useNavigation,
 };
 
 export default Navbar;
