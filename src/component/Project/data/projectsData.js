@@ -7,11 +7,10 @@ export const projectsData = [
     githubLink: "https://github.com/Havennnn/mern-auth",
     liveLink: "https://login-auth-by4k.vercel.app",
     technologies: [
+      { name: "MongoDB", icon: "devicon-mongodb-plain" },
+      { name: "Express.js", icon: "devicon-express-original" },
       { name: "React", icon: "devicon-react-original" },
       { name: "Node.js", icon: "devicon-nodejs-plain" },
-      { name: "Express.js", icon: "devicon-express-original" },
-      { name: "TailwindCSS", icon: "devicon-tailwindcss-plain" },
-      { name: "MongoDB", icon: "devicon-mongodb-plain" },
     ],
   },
   {
@@ -51,7 +50,21 @@ export const projectsData = [
       { name: "React", icon: "devicon-react-original" },
       { name: "Next", icon: "devicon-nextjs-plain" },
       { name: "TailwindCSS", icon: "devicon-tailwindcss-plain" },
-      { name: "Framer Motion", icon: "devicon-framermotion-original" },
+    ],
+  },
+  {
+    title: "NextJob",
+    image: "/nextJob.png",
+    description:
+      "A modern landing page designed using React, Framer, and Tailwind CSS. This website allows users to explore through a clean and modern interface.",
+    githubLink: "https://github.com/Havennnn/Joblisting",
+    liveLink: "#",
+    technologies: [
+      { name: "TailwindCSS", icon: "devicon-tailwindcss-plain" },
+      { name: "Alpine.js", icon: "devicon-alpinejs-original" },
+      { name: "Laravel", icon: "devicon-laravel-original" },
+      { name: "Livewire", icon: "devicon-livewire-plain" },
+      { name: "MySQL", icon: "devicon-mysql-original" },
     ],
   },
 ]; 
