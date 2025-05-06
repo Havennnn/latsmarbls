@@ -6,7 +6,9 @@ import Skills from "./component/Skills";
 import SkillsBox from "./component/SkillsBox";
 import About from "./component/About";
 import Project from "./component/Project";
-import Footer from "./component/Footer.jsx";
+import Experience from "./component/Experience";
+import School from "./component/School";
+import Footer from "./component/Footer";
 import ScrollIndicator from "./component/ScrollIndicator";
 import StickyNavbar from "./component/StickyNavbar";
 import Preloader from "./component/Preloader";
@@ -26,6 +28,12 @@ const App = () => {
       <div id="skills">
         <Skills />
         <SkillsBox />
+      </div>
+      <div id="education">
+        <School />
+      </div>
+      <div id="experience">
+        <Experience />
       </div>
       <div id="contact">
         <About />

@@ -128,7 +128,7 @@ html {
   width: 2.5rem;
   position: absolute;
   top: 0;
-  margin-left: -104px;
+  margin-left: -40px;
   border-radius: 0 1.5rem 0 0;
   box-shadow: 12px -12px 0 0 #1e1e1e;
 }
@@ -139,16 +139,16 @@ html {
   height: 2.5rem;
   width: 2.5rem;
   position: absolute;
-  top: 62px;
+  top: 0;
   right: 0;
-  z-index: -10;
+  margin-top: 63px;
   border-radius: 0 1.5rem 0 0;
   box-shadow: 12px -12px 0 0 #1e1e1e;
 }
 
 .element7::before {
   content: "";
-  background-color: white;
+  background-color: red;
   height: 2.5rem;
   width: 2.5rem;
   position: absolute;
