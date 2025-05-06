@@ -11,7 +11,7 @@ const ExperienceItem = ({ experience }) => {
       }}
     >
       <motion.div
-        className="text-center mb-6 mt-8 lg:mt-0 lg:mb-8"
+        className="text-center mb-6 mt-14 lg:mt-0 lg:mb-8"
         variants={{
           hidden: { opacity: 0, y: 20 },
           visible: { opacity: 1, y: 0, transition: { delay: 0.2 } },
