@@ -86,6 +86,13 @@ const StickyNavbar = () => {
       initial="hidden"
       animate={scrollTriggerReached ? "visible" : "hidden"}
       variants={initialEntryVariants}
+      style={{
+        opacity: Math.min(1, scrollProgress * 4),
+        transform: `translateY(${Math.max(
+          0,
+          (1 - scrollProgress) * 10
+        )}px) scale(${1 + scrollProgress * 0.05})`,
+      }}
     >
       <div ref={placeholderRef} className="h-12"></div>
 

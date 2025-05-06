@@ -7,6 +7,7 @@ const useScrollPosition = (placeholderRef) => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [scrollTriggerReached, setScrollTriggerReached] = useState(false);
+  const [animationPlayed, setAnimationPlayed] = useState(false);
 
   useEffect(() => {
     setLastScrollY(window.scrollY);
@@ -18,15 +19,22 @@ const useScrollPosition = (placeholderRef) => {
       const currentScrollY = window.scrollY;
 
       // Determine if we've scrolled enough to trigger the animation
-      // Typically we want this to happen before the navbar becomes sticky
       const scrollTriggerPoint = 100; // pixels scrolled before animation triggers
-      if (currentScrollY > scrollTriggerPoint && !scrollTriggerReached) {
-        setScrollTriggerReached(true);
+      
+      if (currentScrollY > scrollTriggerPoint) {
+        if (!scrollTriggerReached) {
+          setScrollTriggerReached(true);
+          setAnimationPlayed(true);
+        }
         setIsVisible(true);
-      } else if (currentScrollY <= scrollTriggerPoint && scrollTriggerReached) {
-        setScrollTriggerReached(false);
+      } else if (currentScrollY <= scrollTriggerPoint) {
+        // Only reset if animation hasn't played yet
+        if (!animationPlayed) {
+          setScrollTriggerReached(false);
+        }
       }
 
+      // Update scroll direction
       if (currentScrollY > lastScrollY) {
         setScrollDirection("down");
       } else if (currentScrollY < lastScrollY) {
@@ -35,6 +43,7 @@ const useScrollPosition = (placeholderRef) => {
 
       setLastScrollY(currentScrollY);
 
+      // Calculate sticky state and progress
       const threshold = 20;
       if (navbarTop <= 0) {
         const progress = Math.min(1, Math.abs(navbarTop) / threshold);
@@ -48,8 +57,9 @@ const useScrollPosition = (placeholderRef) => {
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [placeholderRef, lastScrollY, scrollTriggerReached]);
+  }, [placeholderRef, lastScrollY, scrollTriggerReached, animationPlayed]);
 
   return { isSticky, scrollDirection, scrollProgress, isVisible, scrollTriggerReached };
 };
