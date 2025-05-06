@@ -11,14 +11,15 @@ const Skills = () => {
     useSkillsAnimation(sectionRef);
 
   const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20, scale: 0.95 },
     visible: {
       opacity: 1,
       y: 0,
+      scale: 1,
       transition: {
         type: "spring",
         stiffness: 400,
-        damping: 20,
+        damping: 25,
         staggerChildren: 0.1,
         delayChildren: 0.2,
       },
@@ -49,7 +50,9 @@ const Skills = () => {
           opacity: scrollTriggerReached ? 1 : scrollProgress,
           transform: `scale(${
             scrollTriggerReached ? 1 : 0.95 + scrollProgress * 0.05
-          })`,
+          }) translateY(${
+            scrollTriggerReached ? 0 : 20 * (1 - scrollProgress)
+          }px)`,
         }}
       >
         <SkillsHeader />
