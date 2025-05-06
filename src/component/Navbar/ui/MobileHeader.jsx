@@ -88,11 +88,11 @@ const MobileHeader = ({ toggleMenu, isMenuOpen }) => {
           <span className="font-semibold text-2xl text-gray">Marbls</span>
         </p>
       </motion.h1>
-      <div className="flex justify-center items-center p-3 w-16 rounded-bl-[1.5rem] bg-dgray element5 menu">
+      <div className="flex justify-center items-center p-3 w-16 rounded-bl-[1.5rem] bg-dgray element18 menu">
         <motion.button
           whileTap="tap"
           onClick={toggleMenu}
-          className="text-white2 element6 w-full h-full flex justify-center items-center"
+          className="text-white2 element19 w-full h-full flex justify-center items-center"
         >
           {isMenuOpen ? (
             <motion.i

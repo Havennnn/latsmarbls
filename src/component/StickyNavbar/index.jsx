@@ -107,8 +107,8 @@ const StickyNavbar = () => {
             exit="exit"
             variants={stickyVariants}
             className="fixed flex justify-between items-center top-2 inset-x-0 mx-auto z-10 bg-opacity-90 backdrop-blur-sm
-                      h-12 2xl:h-16 px-8 2xl:px-12 bg-white rounded-[1.5rem] shadow-2xl
-                      w-[89.7%] md:w-[93%] 2xl:w-[93.3%]"
+                      h-12 2xl:h-16 px-4 md:px-8 2xl:px-12 bg-white rounded-[1.5rem] shadow-2xl
+                      w-[92%] md:w-[93%] 2xl:w-[93.3%]"
             style={{
               boxShadow: `0 10px 25px rgba(0, 0, 0, ${scrollProgress * 0.15})`,
               transform: `translateY(${scrollDirection === "up" ? 0 : 0}px)`,

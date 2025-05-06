@@ -67,7 +67,7 @@ const MobileMenu = ({ isMenuOpen, scrollToSection }) => {
     <div
       ref={menuRef}
       style={{ transform: "translateX(100%)" }}
-      className="bg-dgray text-white px-2 absolute rounded-bl-[1rem] right-0 top-[60px] z-20 transition-all duration-500 ease-in-out block lg:hidden element8"
+      className="bg-dgray text-white px-2 absolute rounded-bl-[1rem] right-0 mr-[-1px] top-[55px] z-20 transition-all duration-500 ease-in-out block lg:hidden element8"
     >
       <AnimatePresence>
         {isMenuOpen && (

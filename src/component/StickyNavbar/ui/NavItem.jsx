@@ -11,7 +11,7 @@ const NavItem = ({
   const [isHovered, setIsHovered] = useState(false);
 
   const baseClasses =
-    "border rounded-[1.5rem] flex items-center cursor-pointer hover:bg-dgray hover:border-dgray hover:text-white transition ease-in-out duration-300";
+    "border rounded-[1.5rem] flex items-center justify-center cursor-pointer hover:bg-dgray hover:border-dgray hover:text-white transition ease-in-out duration-300";
 
   const itemVariants = {
     initial: { opacity: 0, y: -5 },
@@ -62,8 +62,10 @@ const NavItem = ({
     <motion.li
       onClick={() => scrollToSection(sectionId)}
       className={`${baseClasses} ${
-        isMobile ? "px-3" : "px-3 2xl:px-5 2xl:text-2xl"
-      } h-8 2xl:h-12`}
+        isMobile
+          ? "px-2 w-[45px] h-[45px] text-sm"
+          : "px-3 2xl:px-5 2xl:text-2xl h-8 2xl:h-12"
+      }`}
       initial="initial"
       animate="animate"
       whileHover="hover"
@@ -72,10 +74,14 @@ const NavItem = ({
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
-      <div className="flex items-center h-full">
+      <div
+        className={`flex items-center h-full ${
+          isMobile ? "justify-center" : ""
+        }`}
+      >
         <i className={`fa-solid ${icon}`}></i>
         <AnimatePresence>
-          {isHovered && (
+          {isHovered && !isMobile && (
             <motion.span
               variants={textSlideVariants}
               initial="initial"
