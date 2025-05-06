@@ -1,15 +1,12 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import HeroContent from "./HeroContent";
-import Hero from "./Hero";
-import SocialLinks from "./SocialLinks";
-import ContactModal from "./ContactModal";
-import useContactForm from "./useContactForm";
-import useResume from "./useResume";
+import HeroContent from "./ui/HeroContent";
+import Hero from "./ui/Hero";
+import SocialLinks from "./ui/SocialLinks";
+import ContactModal from "../layouts/forms/ContactModal";
+import useContactForm from "./hooks/useContactForm";
+import useResume from "./hooks/useResume";
 
-/**
- * Main Home component that combines all sections of the home page
- */
 const Home = () => {
   const { showModal, status, openModal, closeModal, onSubmit } =
     useContactForm();
@@ -46,16 +43,13 @@ const Home = () => {
       >
         <div className="relative flex h-full">
           <HeroContent handleDownloadCV={handleDownloadCV} />
-
           <SocialLinks openModal={openModal} />
-
           <ContactModal
             showModal={showModal}
             closeModal={closeModal}
             status={status}
             onSubmit={onSubmit}
           />
-
           <Hero />
         </div>
       </motion.section>
@@ -63,15 +57,4 @@ const Home = () => {
   );
 };
 
-// Export individual components for more flexibility
-export {
-  HeroContent,
-  Hero,
-  SocialLinks,
-  ContactModal,
-  useContactForm,
-  useResume,
-};
-
-// Export the main component as default
 export default Home;
