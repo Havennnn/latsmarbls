@@ -1,7 +1,9 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const LargeDesktopMenu = ({ scrollToSection }) => {
+  const [hoveredItem, setHoveredItem] = useState(null);
+
   const logoVariants = {
     hidden: { opacity: 0, scale: 0.8, rotate: -5 },
     visible: {
@@ -63,6 +65,37 @@ const LargeDesktopMenu = ({ scrollToSection }) => {
     tap: { scale: 0.98 },
   };
 
+  const textSlideVariants = {
+    initial: { width: 0, opacity: 0, x: -10 },
+    animate: {
+      width: "auto",
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 500,
+        damping: 25,
+      },
+    },
+    exit: {
+      width: 0,
+      opacity: 0,
+      x: -10,
+      transition: {
+        duration: 0.2,
+      },
+    },
+  };
+
+  const navItems = [
+    { id: "home", icon: "fa-house", label: "Home", active: true },
+    { id: "skills", icon: "fa-code", label: "Skills" },
+    { id: "education", icon: "fa-graduation-cap", label: "Education" },
+    { id: "experience", icon: "fa-briefcase", label: "Experience" },
+    { id: "contact", icon: "fa-id-badge", label: "Contact" },
+    { id: "projects", icon: "fa-folder", label: "Projects" },
+  ];
+
   return (
     <div className="absolute left-0 right-0 z-10 justify-between items-center gap-2 hidden 2xl:flex">
       <div className="flex">
@@ -89,56 +122,53 @@ const LargeDesktopMenu = ({ scrollToSection }) => {
       </div>
       <div className="flex pl-5 pt-5 pb-6 rounded-bl-[2rem] bg-dgray elementxl">
         <div className="element2xl">
-          <ul className="flex gap-8 duration-500">
-            <motion.li
-              custom={0}
-              initial="hidden"
-              animate="visible"
-              variants={menuItemVariants}
-              className="flex text-white bg-white justify-center items-center text-2xl py-2 px-8 rounded-2xl gap-3"
-            >
-              <i className="fa-solid fa-house text-dgray cursor-default"></i>
-              <p className="font-semibold text-dgray cursor-default">Home</p>
-            </motion.li>
-            <motion.li
-              custom={1}
-              initial="hidden"
-              animate="visible"
-              variants={menuItemVariants}
-              whileHover="hover"
-              whileTap="tap"
-              className="flex text-white border-white hover:cursor-pointer justify-center items-center text-2xl py-2 px-8 rounded-2xl gap-3 border-4 transition ease-in-out duration-500 group"
-              onClick={() => scrollToSection("skills")}
-            >
-              <i className="fa-solid fa-code group-hover:text-dgray"></i>
-              <p className="font-semibold group-hover:text-dgray">Skills</p>
-            </motion.li>
-            <motion.li
-              custom={2}
-              initial="hidden"
-              animate="visible"
-              variants={menuItemVariants}
-              whileHover="hover"
-              whileTap="tap"
-              className="flex text-white border-white hover:cursor-pointer justify-center items-center text-2xl py-2 px-8 rounded-2xl gap-3 border-4 transition ease-in-out duration-500 group"
-              onClick={() => scrollToSection("contact")}
-            >
-              <i className="fa-solid fa-id-badge group-hover:text-dgray"></i>
-              <p className="font-semibold group-hover:text-dgray">Contact</p>
-            </motion.li>
-            <motion.li
-              custom={3}
-              initial="hidden"
-              animate="visible"
-              variants={menuItemVariants}
-              whileHover="hover"
-              whileTap="tap"
-              className="flex text-white border-white hover:cursor-pointer justify-center items-center text-2xl py-2 px-8 rounded-2xl gap-3 border-4 transition ease-in-out duration-500 group"
-              onClick={() => scrollToSection("projects")}
-            >
-              <i className="fa-solid fa-folder group-hover:text-dgray"></i>
-              <p className="font-semibold group-hover:text-dgray">Project</p>
-            </motion.li>
+          <ul className="flex gap-5 duration-500">
+            {navItems.map((item, index) => (
+              <motion.li
+                key={item.id}
+                custom={index}
+                initial="hidden"
+                animate="visible"
+                variants={menuItemVariants}
+                whileHover="hover"
+                whileTap="tap"
+                onHoverStart={() => setHoveredItem(item.id)}
+                onHoverEnd={() => setHoveredItem(null)}
+                className={`flex ${
+                  item.active
+                    ? "text-white bg-white"
+                    : "border-4 text-white border-white"
+                } hover:cursor-pointer py-2 px-8 rounded-2xl justify-center items-center text-2xl transition ease-in-out duration-500 group overflow-hidden h-14`}
+                onClick={() => item.id !== "home" && scrollToSection(item.id)}
+              >
+                <div className="flex items-center h-full">
+                  <i
+                    className={`fa-solid ${item.icon} ${
+                      item.active
+                        ? "text-dgray cursor-default"
+                        : "group-hover:text-dgray"
+                    }`}
+                  ></i>
+                  <AnimatePresence>
+                    {(hoveredItem === item.id || item.active) && (
+                      <motion.p
+                        variants={textSlideVariants}
+                        initial="initial"
+                        animate="animate"
+                        exit="exit"
+                        className={`font-semibold ${
+                          item.active
+                            ? "text-dgray cursor-default"
+                            : "group-hover:text-dgray"
+                        } whitespace-nowrap ml-3 my-0`}
+                      >
+                        {item.label}
+                      </motion.p>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </motion.li>
+            ))}
           </ul>
         </div>
       </div>

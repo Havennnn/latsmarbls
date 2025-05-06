@@ -104,7 +104,33 @@ const MobileMenu = ({ isMenuOpen, scrollToSection }) => {
             </motion.li>
 
             <motion.li
+              custom={3}
+              variants={itemVariants}
+              whileTap="tap"
+              className="flex text-white justify-around items-center transition ease-in-out duration-300"
+              onClick={() => scrollToSection("education")}
+            >
+              <motion.i
+                whileHover={{ scale: 1.2 }}
+                className="fa-solid fa-graduation-cap text-xl text-white"
+              />
+            </motion.li>
+
+            <motion.li
               custom={2}
+              variants={itemVariants}
+              whileTap="tap"
+              className="flex text-white justify-around items-center transition ease-in-out duration-300"
+              onClick={() => scrollToSection("experience")}
+            >
+              <motion.i
+                whileHover={{ scale: 1.2 }}
+                className="fa-solid fa-briefcase text-xl text-white"
+              />
+            </motion.li>
+
+            <motion.li
+              custom={4}
               variants={itemVariants}
               whileTap="tap"
               className="flex gap-2 text-white justify-around items-center hover:cursor-pointer transition ease-in-out duration-300"
@@ -117,7 +143,7 @@ const MobileMenu = ({ isMenuOpen, scrollToSection }) => {
             </motion.li>
 
             <motion.li
-              custom={3}
+              custom={5}
               variants={itemVariants}
               whileTap="tap"
               className="flex gap-2 text-white justify-around items-center transition ease-in-out duration-300"
