@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import StickyNavbarLogo from "./StickyNavbarLogo";
-import NavLinks from "./NavLinks";
-import useScrollPosition from "./useScrollPosition";
-import scrollToSection from "./ScrollHelper";
+import StickyNavbarLogo from "./ui/StickyNavbarLogo";
+import NavLinks from "./ui/NavLinks";
+import useScrollPosition from "./hooks/useScrollPosition";
+import scrollToSection from "./hooks/ScrollHelper";
 
 const StickyNavbar = () => {
   const placeholderRef = useRef(null);
@@ -107,7 +107,7 @@ const StickyNavbar = () => {
             exit="exit"
             variants={stickyVariants}
             className="fixed flex justify-between items-center top-2 inset-x-0 mx-auto z-10 bg-opacity-90 backdrop-blur-sm
-                      h-8 2xl:h-12 px-8 2xl:px-12 bg-white rounded-[1.5rem] shadow-2xl
+                      h-12 2xl:h-16 px-8 2xl:px-12 bg-white rounded-[1.5rem] shadow-2xl
                       w-[89.7%] md:w-[93%] 2xl:w-[93.3%]"
             style={{
               boxShadow: `0 10px 25px rgba(0, 0, 0, ${scrollProgress * 0.15})`,
@@ -125,7 +125,7 @@ const StickyNavbar = () => {
             initial="hidden"
             animate="visible"
             variants={normalVariants}
-            className="relative w-full flex justify-center items-center h-8 2xl:h-12 px-8 2xl:px-12 bg-white 
+            className="relative w-full flex justify-center items-center h-12 2xl:h-16 px-8 2xl:px-12 bg-white 
                     rounded-[1.5rem] shadow-lg border"
           >
             <StickyNavbarLogo isSticky={false} />
