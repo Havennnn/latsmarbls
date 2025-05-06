@@ -1,8 +1,8 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import PreloaderCircle from "./PreloaderCircle";
-import WelcomeScreen from "./WelcomeScreen";
-import usePreloader from "./usePreloader";
+import PreloaderCircle from "./ui/PreloaderCircle";
+import WelcomeScreen from "./ui/WelcomeScreen";
+import usePreloader from "./hooks/usePreloader";
 
 const Preloader = ({
   children,
