@@ -64,17 +64,17 @@ const HeroContent = ({ handleDownloadCV }) => {
         variants={item}
         className="font-bold text-2xl 2xl:text-4xl text-gray"
       >
-        WEB and APP DEVELOPER
+        WEB DEVELOPER
       </motion.p>
 
       <motion.p
         variants={item}
         className="text-dgray 2xl:text-2xl tracking-tight"
       >
-        I am applying for an internship to receive hands-on training and learn
-        from experienced professionals. I am eager to improve my skills in web
-        and app development and gain practical knowledge that will help me grow
-        in the field
+        Motivated and detail-oriented web developer, seeking a full-time
+        position where I can contribute to real-world projects, grow
+        professionally, and apply my skills in web and app development using
+        modern technologies.
       </motion.p>
 
       <motion.div
