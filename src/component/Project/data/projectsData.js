@@ -56,7 +56,7 @@ export const projectsData = [
     title: "NextJob",
     image: "/nextJob.png",
     description:
-      "A modern landing page designed using React, Framer, and Tailwind CSS. This website allows users to explore through a clean and modern interface.",
+      "NextJob is a dynamic job listing platform built with Laravel and Livewire. MySQL managing the backend database.",
     githubLink: "https://github.com/Havennnn/Joblisting",
     liveLink: "#",
     technologies: [
