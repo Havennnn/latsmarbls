@@ -26,11 +26,6 @@ export const skillsData = [
   },
 
   {
-    name: "Next.js",
-    icon: "devicon-nextjs-plain",
-    category: "Frontend",
-  },
-  {
     name: "Livewire",
     icon: "devicon-laravel-plain",
     category: "Frontend",
@@ -59,11 +54,6 @@ export const skillsData = [
   {
     name: "Laravel",
     icon: "devicon-laravel-plain",
-    category: "Backend",
-  },
-  {
-    name: "Django",
-    icon: "devicon-django-plain",
     category: "Backend",
   },
   {
