@@ -18,8 +18,7 @@ const useScrollPosition = (placeholderRef) => {
       const navbarTop = placeholderRef.current.getBoundingClientRect().top;
       const currentScrollY = window.scrollY;
 
-      // Determine if we've scrolled enough to trigger the animation
-      const scrollTriggerPoint = 100; // pixels scrolled before animation triggers
+      const scrollTriggerPoint = 100;
       
       if (currentScrollY > scrollTriggerPoint) {
         if (!scrollTriggerReached) {
@@ -28,13 +27,11 @@ const useScrollPosition = (placeholderRef) => {
         }
         setIsVisible(true);
       } else if (currentScrollY <= scrollTriggerPoint) {
-        // Only reset if animation hasn't played yet
         if (!animationPlayed) {
           setScrollTriggerReached(false);
         }
       }
 
-      // Update scroll direction
       if (currentScrollY > lastScrollY) {
         setScrollDirection("down");
       } else if (currentScrollY < lastScrollY) {
@@ -43,7 +40,6 @@ const useScrollPosition = (placeholderRef) => {
 
       setLastScrollY(currentScrollY);
 
-      // Calculate sticky state and progress
       const threshold = 20;
       if (navbarTop <= 0) {
         const progress = Math.min(1, Math.abs(navbarTop) / threshold);
@@ -57,7 +53,7 @@ const useScrollPosition = (placeholderRef) => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, [placeholderRef, lastScrollY, scrollTriggerReached, animationPlayed]);
 
