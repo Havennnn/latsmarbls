@@ -39,27 +39,10 @@ const EducationItem = ({ education }) => {
 
       <div className="pl-0 md:pl-12">
         <h4 className="text-lg md:text-xl 2xl:text-2xl font-semibold text-dgray mb-3">
-          What I Learned
+          Achievement
         </h4>
-        <ul className="list-disc pl-5 space-y-2">
-          {education.whatILearned.map((item, index) => (
-            <motion.li
-              key={index}
-              className="text-gray md:text-lg 2xl:text-xl"
-              variants={{
-                hidden: { opacity: 0, x: -20 },
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                  transition: {
-                    delay: 0.2 + index * 0.1,
-                  },
-                },
-              }}
-            >
-              {item}
-            </motion.li>
-          ))}
+        <ul className="list-disc text-md md:text-lg 2xl:text-xl text-gray">
+          {education.whatILearned}
         </ul>
 
         {education.courses && (
