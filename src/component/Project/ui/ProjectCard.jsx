@@ -40,14 +40,16 @@ const ProjectCard = ({ project }) => {
           >
             <i className="fa-brands fa-github hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
           </a>
-          <a
-            href={project.liveLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center"
-          >
-            <i className="fa-solid fa-globe text-dgray hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
-          </a>
+          {project.liveLink !== "#" && (
+            <a
+              href={project.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <i className="fa-solid fa-globe text-dgray hover:cursor-pointer hover:transform hover:scale-110 hover:text-highlight transition duration-300 ease-in-out"></i>
+            </a>
+          )}
         </div>
       </div>
       <p className="text-gray-500 text-sm 2xl:text-xl mt-2 2xl:mt-4 tracking-tight">

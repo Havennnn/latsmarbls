@@ -67,4 +67,19 @@ export const projectsData = [
       { name: "MySQL", icon: "devicon-mysql-original" },
     ],
   },
+  {
+    title: "Cabi",
+    image: "/cabi.png",
+    description:
+      "Cabi is a taxi-hailing backend and website for an application job built with Laravel and Livewire. MySQL managing the backend database.",
+    githubLink: "https://github.com/Havennnn/Cabi",
+    liveLink: "#",
+    technologies: [
+      { name: "TailwindCSS", icon: "devicon-tailwindcss-plain" },
+      { name: "Alpine.js", icon: "devicon-alpinejs-original" },
+      { name: "Laravel", icon: "devicon-laravel-original" },
+      { name: "Livewire", icon: "devicon-livewire-plain" },
+      { name: "MySQL", icon: "devicon-mysql-original" },
+    ],
+  },
 ]; 
