@@ -1,6 +1,7 @@
 export const experienceData = [
   {
-    title: "Backend Web Developer",
+    image: "Neksjob.png",
+    title: "Backend Developer Intern",
     company: "Neksjob PH",
     period: "Feb 2025 - April 2025",
     responsibilities: [

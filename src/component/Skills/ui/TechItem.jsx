@@ -17,16 +17,16 @@ const TechItem = ({ skill }) => {
 
   return (
     <motion.div
-      className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+      className="bg-white p-2 rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300"
       variants={itemVariants}
       whileHover={{ scale: 1.02 }}
       transition={{ type: "spring", stiffness: 400, damping: 20 }}
     >
-      <div className="flex items-center gap-4">
-        <i className={`${skill.icon} text-4xl text-dgray`}></i>
+      <div className="flex items-center ml-4 gap-4">
+        <i className={`${skill.icon} text-3xl text-dgray`}></i>
         <div>
-          <h3 className="text-xl font-semibold text-dgray">{skill.name}</h3>
-          <p className="text-gray-600">{skill.category}</p>
+          <h3 className="text-md font-semibold text-dgray">{skill.name}</h3>
+          <p className="text-xsm text-gray-600">{skill.category}</p>
         </div>
       </div>
     </motion.div>

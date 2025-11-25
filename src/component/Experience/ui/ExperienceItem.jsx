@@ -11,7 +11,7 @@ const ExperienceItem = ({ experience }) => {
       }}
     >
       <motion.div
-        className="text-center mb-6 mt-14 lg:mt-0 lg:mb-8"
+        className="mt-14 lg:mt-0 lg:mb-4"
         variants={{
           hidden: { opacity: 0, y: 20 },
           visible: { opacity: 1, y: 0, transition: { delay: 0.2 } },
@@ -20,33 +20,31 @@ const ExperienceItem = ({ experience }) => {
         <h2 className="text-xl sm:text-2xl 2xl:text-3xl text-dgray font-bold mb-2 sm:mb-3">
           My Professional Journey
         </h2>
-        <p className="text-gray text-base sm:text-lg 2xl:text-2xl max-w-3xl mx-auto">
+        <p className="text-gray text-base sm:text-lg 2xl:text-2xl">
           Here's a highlight of my professional experience.
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 mt-6 sm:mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6">
         <div className="md:col-span-4 relative">
-          <div className="bg-gray-50 p-4 sm:p-5 rounded-xl h-full flex flex-col justify-between">
+          <div className="bg-gray-50 rounded-xl h-full flex flex-col justify-between">
             <div>
-              <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                <div className="bg-dgray rounded-full p-2 sm:p-3 flex items-center justify-center">
-                  <i className="fa-solid fa-briefcase text-white text-lg sm:text-xl"></i>
-                </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl 2xl:text-3xl font-bold text-dgray">
-                  {experience.title}
+              <div className="flex items-center mb-1 gap-1">
+                  <img src={experience.image} alt="Neksjob PH" className="rounded-full h-14" />
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-dgray">
+                  {experience.company}
                 </h3>
               </div>
 
-              <div className="flex items-center gap-2 mb-3 sm:mb-4">
-                <i className="fa-solid fa-building text-dgray text-base sm:text-lg"></i>
-                <p className="text-base sm:text-lg md:text-xl 2xl:text-2xl text-gray">
-                  {experience.company}
+              <div className="flex items-center md:ml-2 gap-2 mb-3 sm:mb-4">
+                <i className="fa-solid fa-code text-dgray text-base sm:text-lg" />
+                <p className="text-base sm:text-lg md:text-xl 2xl:text-2xl text-dgray">
+                  {experience.title}
                 </p>
               </div>
 
               <div className="inline-flex items-center gap-2 bg-dgray rounded-full px-3 sm:px-4 py-1.5 sm:py-2 mt-1 sm:mt-2">
-                <i className="fa-regular fa-calendar text-white"></i>
+                <i className="fa-regular fa-calendar text-white" />
                 <p className="text-white font-medium text-xs sm:text-sm">
                   {experience.period}
                 </p>
@@ -74,17 +72,17 @@ const ExperienceItem = ({ experience }) => {
           </div>
         </div>
 
-        <div className="md:col-span-8 flex flex-col mt-4 md:mt-0">
+        <div className="md:col-span-8 flex flex-col">
           <div>
             <div className="mb-4 sm:mb-6">
-              <h1 className="text-xl sm:text-xl md:text-2xl 2xl:text-3xl font-semibold text-dgray mb-2 sm:mb-3 flex items-center gap-2">
+              <h1 className="text-xl sm:text-xl md:text-1xl 2xl:text-2xl font-semibold text-dgray mb-2 sm:mb-3 flex items-center gap-2">
                 Responsibilities
               </h1>
-              <ul className="list-disc pl-4 sm:pl-5 space-y-1.5 sm:space-y-2">
+              <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2">
                 {experience.responsibilities.map((responsibility, index) => (
                   <motion.li
                     key={index}
-                    className="text-gray text-sm sm:text-base md:text-lg 2xl:text-xl"
+                    className="text-gray text-sm sm:text-base md:text-md 2xl:text-lg"
                     variants={{
                       hidden: { opacity: 0, x: -20 },
                       visible: {

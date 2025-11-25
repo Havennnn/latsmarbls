@@ -25,7 +25,7 @@ const SkillsJourney = () => {
       <h2 className="text-2xl md:text-3xl font-bold text-dgray mb-4">
         My Skills Journey
       </h2>
-      <p className="text-gray-600 text-lg">
+      <p className="text-gray-600 text-md">
         Throughout my journey as a developer, I've worked with various
         technologies and frameworks. Here's a showcase of my technical skills
         and expertise.

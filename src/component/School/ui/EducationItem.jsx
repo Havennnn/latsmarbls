@@ -20,14 +20,14 @@ const EducationItem = ({ education }) => {
 
       <div className="flex flex-col md:flex-row justify-between md:items-center mb-4">
         <div className="flex items-start md:items-center gap-3">
-          <div className="bg-dgray rounded-full p-3 hidden md:flex">
-            <i className="fa-solid fa-graduation-cap text-white text-2xl"></i>
+          <div className="hidden md:flex">
+            <img src={education.image} alt="STI College Ortigas-Cainta" className="rounded-full h-12" />
           </div>
           <div>
-            <h3 className="text-xl md:text-2xl 2xl:text-3xl font-bold text-dgray">
+            <h3 className="text-xl 2xl:text-2xl font-bold text-dgray">
               {education.institution}
             </h3>
-            <p className="text-lg md:text-xl 2xl:text-2xl text-gray">
+            <p className="text-md md:text-xl 2xl:text-2xl text-gray">
               {education.degree}
             </p>
           </div>
@@ -37,7 +37,7 @@ const EducationItem = ({ education }) => {
         </p>
       </div>
 
-      <div className="pl-0 md:pl-12">
+      <div className="pl-0 md:pl-2">
         <h4 className="text-lg md:text-xl 2xl:text-2xl font-semibold text-dgray mb-3">
           Achievement
         </h4>

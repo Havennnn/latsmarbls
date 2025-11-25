@@ -24,13 +24,13 @@ const PaginationControls = ({ currentPage, totalPages, onPageChange }) => {
         <button
           key={page}
           onClick={() => onPageChange(page)}
-          className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 ${
+          className={`text-sm w-7 h-7 rounded-full flex items-center justify-center transition-colors duration-300 ${
             currentPage === page
               ? "bg-highlight text-white"
               : "bg-gray-200 text-dgray hover:bg-gray-300"
           }`}
         >
-          {page}
+           {page} 
         </button>
       ))}
     </motion.div>
