@@ -1,5 +1,5 @@
 # Hi! I am LatsMarbls 👋
-**`Laravel Web Developer`**
+**`Backend Developer`**
 
 I'm a web developer. I specialize in backend mainly in PHP and Laravel Framework.
 
